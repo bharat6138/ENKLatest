@@ -41,10 +41,7 @@
         $('form').live("submit", function () {
             ShowProgress();
         });
-
-
-
-    </script>
+</script>
     <style type="text/css">
         .modal {
             top: 0;
