@@ -13,10 +13,7 @@
             display: none;
         }
     </style>
-
-
-
-    <script type="text/javascript">
+<script type="text/javascript">
         function ShowProgress() {
             $("#popupdiv").dialog({
                 title: "",
