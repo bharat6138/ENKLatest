@@ -1,0 +1,1974 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{051FBA9B-DD7A-4B25-8129-AB061BE90911}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ENK</RootNamespace>
+    <AssemblyName>ENK</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin, Version=4.97.4951.28478, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.2.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.2.1\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Users\Mayank\Downloads\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Mayank\Desktop\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ActivatePreloadedSim.aspx" />
+    <Content Include="ActivationDetails.aspx" />
+    <Content Include="ActivationFailedReport.aspx" />
+    <Content Include="ActivationLegderReport.aspx" />
+    <Content Include="ApiMapping.aspx" />
+    <Content Include="Banner.aspx" />
+    <Content Include="CommissionReport.aspx" />
+    <Content Include="css\bootstrap1.min.css" />
+    <Content Include="css\filterTab.css" />
+    <Content Include="Emailer.aspx" />
+    <Content Include="ENKEmailer.htm" />
+    <Content Include="ENKEmailer.aspx" />
+    <Content Include="GlobalRecharge.aspx" />
+    <Content Include="H2ORecharge.aspx" />
+    <Content Include="H2OSimActivation.aspx" />
+    <Content Include="IccidMsisdnSearch.aspx" />
+    <Content Include="img\cd-icon-arrow.svg" />
+    <Content Include="img\cd-icon-check.svg" />
+    <Content Include="img\cd-icon-filter.svg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\logologin.png" />
+    <Content Include="IpMapping.aspx" />
+    <Content Include="js\main.js" />
+    <Content Include="Log\Recharge.txt" />
+    <Content Include="RechargeActivationCancelReport.aspx" />
+    <Content Include="img\10.jpg" />
+    <Content Include="img\11.jpg" />
+    <Content Include="img\12.jpg" />
+    <Content Include="LycaRecharge.aspx" />
+    <Content Include="ActivationSim.aspx" />
+    <Content Include="ActivationPortin.aspx" />
+    <Content Include="ActivationSIMReport.aspx" />
+    <Content Include="ActivationStatus.aspx" />
+    <Content Include="AddDistributor.aspx" />
+    <Content Include="ajax\email-compose.html" />
+    <Content Include="ajax\email-opened.html" />
+    <Content Include="ajax\email-reply.html" />
+    <Content Include="ajax\email-template.html" />
+    <Content Include="ajax\email\email-list.html" />
+    <Content Include="ajax\modal-content\modal-voicecommand.html" />
+    <Content Include="ajax\notify\mail.html" />
+    <Content Include="ajax\notify\notifications.html" />
+    <Content Include="ajax\notify\tasks.html" />
+    <Content Include="ajax\website-template.html" />
+    <Content Include="AndroidRecharge.aspx" />
+    <Content Include="AndroidRechargeFail.aspx" />
+    <Content Include="AndroidRechargeSuccess.aspx" />
+    <Content Include="APIError.aspx" />
+    <Content Include="approvals.aspx" />
+    <Content Include="Createplans.aspx" />
+    <Content Include="CreateTariffGroup.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\demo.min.css" />
+    <Content Include="css\ezeeway-production.min.css" />
+    <Content Include="css\ezeeway-rtl.min.css" />
+    <Content Include="css\ezeeway-skins.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\invoice.min.css" />
+    <Content Include="css\lockscreen.min.css" />
+    <Content Include="css\plugins\chosen\chosen-sprite%402x.png" />
+    <Content Include="css\plugins\chosen\chosen-sprite.png" />
+    <Content Include="css\plugins\chosen\chosen.css" />
+    <Content Include="css\smartadmin-production-plugins.min.css" />
+    <Content Include="css\smartadmin-production.min.css" />
+    <Content Include="css\smartadmin-rtl.min.css" />
+    <Content Include="css\smartadmin-skins.min.css" />
+    <Content Include="css\your_style.css" />
+    <Content Include="Currency.aspx" />
+    <Content Include="CurrencyView.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="DecryptPassword.aspx" />
+    <Content Include="DeductReport.aspx" />
+    <Content Include="DistributorNotes.aspx" />
+    <Content Include="DistributorPlanMappingChange.aspx" />
+    <Content Include="DistributorView.aspx" />
+    <Content Include="ExcelImport.aspx" />
+    <Content Include="expresscheckout.aspx" />
+    <Content Include="Fail.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome4.2\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome4.2\readme.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ForgetPassword.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="img\1.jpg" />
+    <Content Include="img\2.jpg" />
+    <Content Include="img\3.jpg" />
+    <Content Include="img\4.jpg" />
+    <Content Include="img\6.jpg" />
+    <Content Include="img\7.jpg" />
+    <Content Include="img\ajax-loader.gif" />
+    <Content Include="img\alpha.png" />
+    <Content Include="img\appstore2.png" />
+    <Content Include="img\avatars\1.png" />
+    <Content Include="img\avatars\2.png" />
+    <Content Include="img\avatars\3.png" />
+    <Content Include="img\avatars\4.png" />
+    <Content Include="img\avatars\5.png" />
+    <Content Include="img\avatars\copyright.txt" />
+    <Content Include="img\avatars\female.png" />
+    <Content Include="img\avatars\male.png" />
+    <Content Include="img\avatars\sunny-big.png" />
+    <Content Include="img\avatars\sunny.png" />
+    <Content Include="img\blank.gif" />
+    <Content Include="img\Calendar.png" />
+    <Content Include="img\clear.png" />
+    <Content Include="img\demo\64x64.png" />
+    <Content Include="img\demo\basic.png" />
+    <Content Include="img\demo\chat.png" />
+    <Content Include="img\demo\copyright.txt" />
+    <Content Include="img\demo\demo-smartbig-alert.png" />
+    <Content Include="img\demo\demo-smartmedium-alert.png" />
+    <Content Include="img\demo\demo-smartsmall-alert.png" />
+    <Content Include="img\demo\hero.png" />
+    <Content Include="img\demo\image-placeholder-64x64.png" />
+    <Content Include="img\demo\iphoneview.png" />
+    <Content Include="img\demo\m1.jpg" />
+    <Content Include="img\demo\m2.jpg" />
+    <Content Include="img\demo\m3.jpg" />
+    <Content Include="img\demo\newsletter.png" />
+    <Content Include="img\demo\responseimg.png" />
+    <Content Include="img\demo\s1.jpg" />
+    <Content Include="img\demo\s2.jpg" />
+    <Content Include="img\demo\s3.jpg" />
+    <Content Include="img\demo\sa-demo.png" />
+    <Content Include="img\demo\sample.jpg" />
+    <Content Include="img\demo\sidebar.png" />
+    <Content Include="img\demo\sidebarhero.png" />
+    <Content Include="img\demo\site-1.jpg" />
+    <Content Include="img\demo\site-2.jpg" />
+    <Content Include="img\demo\widget-colorpicker.png" />
+    <Content Include="img\dropzone\spritemap%402x.png" />
+    <Content Include="img\dropzone\spritemap.png" />
+    <Content Include="img\favicon\1favicon.ico" />
+    <Content Include="img\favicon\favicon.ico" />
+    <Content Include="img\favicon\favicon.png" />
+    <Content Include="img\flags\de.png" />
+    <Content Include="img\flags\es.png" />
+    <Content Include="img\flags\flags.png" />
+    <Content Include="img\flags\us.png" />
+    <Content Include="img\glass.jpg" />
+    <Content Include="img\gradient\login.png" />
+    <Content Include="img\invoice\americanexpress.png" />
+    <Content Include="img\invoice\license.txt" />
+    <Content Include="img\invoice\mastercard.png" />
+    <Content Include="img\invoice\paypal.png" />
+    <Content Include="img\invoice\visa.png" />
+    <Content Include="img\expresscheckout_buttons.png" />
+    <Content Include="img\favicon\favicon1.png" />
+    <Content Include="img\hue.png" />
+    <Content Include="img\icon-close-round-16.png" />
+    <Content Include="img\ins.jpg" />
+    <Content Include="img\jcrop\Jcrop.gif" />
+    <Content Include="img\jqueryui\ui-bg_flat_0_999999_40x100.png" />
+    <Content Include="img\jqueryui\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="img\jqueryui\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="img\jqueryui\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="img\jqueryui\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="img\jqueryui\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="img\jqueryui\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="img\jqueryui\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="img\jqueryui\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="img\jqueryui\ui-icons_222222_256x240.png" />
+    <Content Include="img\jqueryui\ui-icons_2e83ff_256x240.png" />
+    <Content Include="img\jqueryui\ui-icons_428bca_256x240.png" />
+    <Content Include="img\jqueryui\ui-icons_454545_256x240.png" />
+    <Content Include="img\jqueryui\ui-icons_555555_256x240.png" />
+    <Content Include="img\jqueryui\ui-icons_888888_256x240.png" />
+    <Content Include="img\jqueryui\ui-icons_999999_256x240.png" />
+    <Content Include="img\jqueryui\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="img\jqueryui\ui-icons_f0ad4e_256x240.png" />
+    <Content Include="img\jqueryui\ui-icons_f6cf3b_256x240.png" />
+    <Content Include="img\jqueryui\ui-icons_ffffff_256x240.png" />
+    <Content Include="img\loader.gif" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\logo-o.png" />
+    <Content Include="img\logo-pale.png" />
+    <Content Include="img\logo-white.png" />
+    <Content Include="img\logoOldAH.png" />
+    <Content Include="img\logo1.png" />
+    <Content Include="img\LycaMobile.png" />
+    <Content Include="img\mappin-default.png" />
+    <Content Include="img\minus.png" />
+    <Content Include="img\mybg.png" />
+    <Content Include="img\pattern\divider.jpg" />
+    <Content Include="img\pattern\graphy-xs.png" />
+    <Content Include="img\pattern\graphy.png" />
+    <Content Include="img\pattern\license-info.txt" />
+    <Content Include="img\pattern\lightpaperfibers.png" />
+    <Content Include="img\pattern\movable.png" />
+    <Content Include="img\pattern\nistri-xs.png" />
+    <Content Include="img\pattern\nistri.png" />
+    <Content Include="img\pattern\overlay-pattern.png" />
+    <Content Include="img\pattern\paper-xs.png" />
+    <Content Include="img\pattern\paper.png" />
+    <Content Include="img\pattern\pattern.png" />
+    <Content Include="img\pattern\sneaker_mesh_fabric-xs.png" />
+    <Content Include="img\pattern\sneaker_mesh_fabric.png" />
+    <Content Include="img\pattern\tileable_wood_texture-xs.png" />
+    <Content Include="img\pattern\tileable_wood_texture.png" />
+    <Content Include="img\pdf.png" />
+    <Content Include="img\playstore.png" />
+    <Content Include="img\plus.png" />
+    <Content Include="img\ribbon.png" />
+    <Content Include="img\road.jpg" />
+    <Content Include="img\sa-dark.png" />
+    <Content Include="img\sa-default.png" />
+    <Content Include="img\saturation.png" />
+    <Content Include="img\select2-spinner.gif" />
+    <Content Include="img\sort_asc.png" />
+    <Content Include="img\sort_asc_disabled.png" />
+    <Content Include="img\sort_both.png" />
+    <Content Include="img\sort_desc.png" />
+    <Content Include="img\sort_desc_disabled.png" />
+    <Content Include="img\spirit-arrow.png" />
+    <Content Include="img\splash\ipad-landscape.png" />
+    <Content Include="img\splash\ipad-portrait.png" />
+    <Content Include="img\splash\iphone.png" />
+    <Content Include="img\splash\sptouch-icon-iphone.png" />
+    <Content Include="img\splash\touch-icon-ipad-retina.png" />
+    <Content Include="img\splash\touch-icon-ipad.png" />
+    <Content Include="img\splash\touch-icon-iphone-retina.png" />
+    <Content Include="img\superbox\superbox-full-1.jpg" />
+    <Content Include="img\superbox\superbox-full-10.jpg" />
+    <Content Include="img\superbox\superbox-full-11.jpg" />
+    <Content Include="img\superbox\superbox-full-12.jpg" />
+    <Content Include="img\superbox\superbox-full-13.jpg" />
+    <Content Include="img\superbox\superbox-full-14.jpg" />
+    <Content Include="img\superbox\superbox-full-15.jpg" />
+    <Content Include="img\superbox\superbox-full-16.jpg" />
+    <Content Include="img\superbox\superbox-full-17.jpg" />
+    <Content Include="img\superbox\superbox-full-18.jpg" />
+    <Content Include="img\superbox\superbox-full-19.jpg" />
+    <Content Include="img\superbox\superbox-full-2.jpg" />
+    <Content Include="img\superbox\superbox-full-20-bw.jpg" />
+    <Content Include="img\superbox\superbox-full-20.jpg" />
+    <Content Include="img\superbox\superbox-full-21.jpg" />
+    <Content Include="img\superbox\superbox-full-22.jpg" />
+    <Content Include="img\superbox\superbox-full-23.jpg" />
+    <Content Include="img\superbox\superbox-full-24.jpg" />
+    <Content Include="img\superbox\superbox-full-3.jpg" />
+    <Content Include="img\superbox\superbox-full-4.jpg" />
+    <Content Include="img\superbox\superbox-full-5.jpg" />
+    <Content Include="img\superbox\superbox-full-6.jpg" />
+    <Content Include="img\superbox\superbox-full-7.jpg" />
+    <Content Include="img\superbox\superbox-full-8.jpg" />
+    <Content Include="img\superbox\superbox-full-9.jpg" />
+    <Content Include="img\superbox\superbox-thumb-1.jpg" />
+    <Content Include="img\superbox\superbox-thumb-10.jpg" />
+    <Content Include="img\superbox\superbox-thumb-11.jpg" />
+    <Content Include="img\superbox\superbox-thumb-12.jpg" />
+    <Content Include="img\superbox\superbox-thumb-13.jpg" />
+    <Content Include="img\superbox\superbox-thumb-14.jpg" />
+    <Content Include="img\superbox\superbox-thumb-15.jpg" />
+    <Content Include="img\superbox\superbox-thumb-16.jpg" />
+    <Content Include="img\superbox\superbox-thumb-17.jpg" />
+    <Content Include="img\superbox\superbox-thumb-18.jpg" />
+    <Content Include="img\superbox\superbox-thumb-19.jpg" />
+    <Content Include="img\superbox\superbox-thumb-2.jpg" />
+    <Content Include="img\superbox\superbox-thumb-20.jpg" />
+    <Content Include="img\superbox\superbox-thumb-21.jpg" />
+    <Content Include="img\superbox\superbox-thumb-22.jpg" />
+    <Content Include="img\superbox\superbox-thumb-23.jpg" />
+    <Content Include="img\superbox\superbox-thumb-24.jpg" />
+    <Content Include="img\superbox\superbox-thumb-3.jpg" />
+    <Content Include="img\superbox\superbox-thumb-4.jpg" />
+    <Content Include="img\superbox\superbox-thumb-5.jpg" />
+    <Content Include="img\superbox\superbox-thumb-6.jpg" />
+    <Content Include="img\superbox\superbox-thumb-7.jpg" />
+    <Content Include="img\superbox\superbox-thumb-8.jpg" />
+    <Content Include="img\superbox\superbox-thumb-9.jpg" />
+    <Content Include="img\thankyou.png" />
+    <Content Include="img\versions\ajaxversion.png" />
+    <Content Include="img\versions\angularversion.png" />
+    <Content Include="img\versions\dotnetversion.png" />
+    <Content Include="img\versions\htmlversion.png" />
+    <Content Include="img\versions\phpversion.png" />
+    <Content Include="img\versions\reactversion.png" />
+    <Content Include="img\violate.jpg" />
+    <Content Include="img\voicecommand\active-btn.gif" />
+    <Content Include="img\vt-menu.png" />
+    <Content Include="InventoryAccept.aspx" />
+    <Content Include="img\InventoryFiles\Topup.txt" />
+    <Content Include="InventoryPurchaseReport.aspx" />
+    <Content Include="InventoryStatusReport.aspx" />
+    <Content Include="InventoryTransfer.aspx" />
+    <Content Include="js\app.config.js" />
+    <Content Include="js\app.min.js" />
+    <Content Include="js\bootstrap\bootstrap-datepicker.js" />
+    <Content Include="js\bootstrap\bootstrap.min.js" />
+    <Content Include="js\custom-popup.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\demo.min.js" />
+    <Content Include="js\jquery-2.1.1.js" />
+    <Content Include="js\jquery1.js" />
+    <Content Include="js\libs\jquery-2.0.2.min.js" />
+    <Content Include="js\libs\jquery-2.1.1.min.js" />
+    <Content Include="js\libs\jquery-ui-1.10.3.min.js" />
+    <Content Include="js\notification\SmartNotification.min.js" />
+    <Content Include="js\plugin\bootstrap-duallistbox\jquery.bootstrap-duallistbox.min.js" />
+    <Content Include="js\plugin\bootstrap-progressbar\bootstrap-progressbar.min.js" />
+    <Content Include="js\plugin\bootstrap-slider\bootstrap-slider.min.js" />
+    <Content Include="js\plugin\bootstrap-tags\bootstrap-tagsinput-angular.min.js" />
+    <Content Include="js\plugin\bootstrap-tags\bootstrap-tagsinput.min.js" />
+    <Content Include="js\plugin\bootstrap-timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="js\plugin\bootstrap-wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="js\plugin\bootstraptree\bootstrap-tree.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\bootstrapValidator.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\ar_MA.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\be_NL.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\bg_BG.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\cs_CZ.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\da_DK.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\de_DE.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\en_US.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\es_CL.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\es_ES.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\fr_FR.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\gr_EL.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\hu_HU.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\it_IT.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\nl_NL.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\pl_PL.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\pt_BR.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\tr_TR.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\vi_VN.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\zh_CN.min.js" />
+    <Content Include="js\plugin\bootstrapvalidator\language\zh_TW.min.js" />
+    <Content Include="js\plugin\chartjs\chart.min.js" />
+    <Content Include="js\plugin\chosen\chosen.jquery.js" />
+    <Content Include="js\plugin\ckeditor\adapters\jquery.js" />
+    <Content Include="js\plugin\ckeditor\build-config.js" />
+    <Content Include="js\plugin\ckeditor\ckeditor.js" />
+    <Content Include="js\plugin\ckeditor\config.js" />
+    <Content Include="js\plugin\ckeditor\contents.css" />
+    <Content Include="js\plugin\ckeditor\lang\af.js" />
+    <Content Include="js\plugin\ckeditor\lang\ar.js" />
+    <Content Include="js\plugin\ckeditor\lang\bg.js" />
+    <Content Include="js\plugin\ckeditor\lang\bn.js" />
+    <Content Include="js\plugin\ckeditor\lang\bs.js" />
+    <Content Include="js\plugin\ckeditor\lang\ca.js" />
+    <Content Include="js\plugin\ckeditor\lang\cs.js" />
+    <Content Include="js\plugin\ckeditor\lang\cy.js" />
+    <Content Include="js\plugin\ckeditor\lang\da.js" />
+    <Content Include="js\plugin\ckeditor\lang\de.js" />
+    <Content Include="js\plugin\ckeditor\lang\el.js" />
+    <Content Include="js\plugin\ckeditor\lang\en-au.js" />
+    <Content Include="js\plugin\ckeditor\lang\en-ca.js" />
+    <Content Include="js\plugin\ckeditor\lang\en-gb.js" />
+    <Content Include="js\plugin\ckeditor\lang\en.js" />
+    <Content Include="js\plugin\ckeditor\lang\eo.js" />
+    <Content Include="js\plugin\ckeditor\lang\es.js" />
+    <Content Include="js\plugin\ckeditor\lang\et.js" />
+    <Content Include="js\plugin\ckeditor\lang\eu.js" />
+    <Content Include="js\plugin\ckeditor\lang\fa.js" />
+    <Content Include="js\plugin\ckeditor\lang\fi.js" />
+    <Content Include="js\plugin\ckeditor\lang\fo.js" />
+    <Content Include="js\plugin\ckeditor\lang\fr-ca.js" />
+    <Content Include="js\plugin\ckeditor\lang\fr.js" />
+    <Content Include="js\plugin\ckeditor\lang\gl.js" />
+    <Content Include="js\plugin\ckeditor\lang\gu.js" />
+    <Content Include="js\plugin\ckeditor\lang\he.js" />
+    <Content Include="js\plugin\ckeditor\lang\hi.js" />
+    <Content Include="js\plugin\ckeditor\lang\hr.js" />
+    <Content Include="js\plugin\ckeditor\lang\hu.js" />
+    <Content Include="js\plugin\ckeditor\lang\id.js" />
+    <Content Include="js\plugin\ckeditor\lang\is.js" />
+    <Content Include="js\plugin\ckeditor\lang\it.js" />
+    <Content Include="js\plugin\ckeditor\lang\ja.js" />
+    <Content Include="js\plugin\ckeditor\lang\ka.js" />
+    <Content Include="js\plugin\ckeditor\lang\km.js" />
+    <Content Include="js\plugin\ckeditor\lang\ko.js" />
+    <Content Include="js\plugin\ckeditor\lang\ku.js" />
+    <Content Include="js\plugin\ckeditor\lang\lt.js" />
+    <Content Include="js\plugin\ckeditor\lang\lv.js" />
+    <Content Include="js\plugin\ckeditor\lang\mk.js" />
+    <Content Include="js\plugin\ckeditor\lang\mn.js" />
+    <Content Include="js\plugin\ckeditor\lang\ms.js" />
+    <Content Include="js\plugin\ckeditor\lang\nb.js" />
+    <Content Include="js\plugin\ckeditor\lang\nl.js" />
+    <Content Include="js\plugin\ckeditor\lang\no.js" />
+    <Content Include="js\plugin\ckeditor\lang\pl.js" />
+    <Content Include="js\plugin\ckeditor\lang\pt-br.js" />
+    <Content Include="js\plugin\ckeditor\lang\pt.js" />
+    <Content Include="js\plugin\ckeditor\lang\ro.js" />
+    <Content Include="js\plugin\ckeditor\lang\ru.js" />
+    <Content Include="js\plugin\ckeditor\lang\si.js" />
+    <Content Include="js\plugin\ckeditor\lang\sk.js" />
+    <Content Include="js\plugin\ckeditor\lang\sl.js" />
+    <Content Include="js\plugin\ckeditor\lang\sq.js" />
+    <Content Include="js\plugin\ckeditor\lang\sr-latn.js" />
+    <Content Include="js\plugin\ckeditor\lang\sr.js" />
+    <Content Include="js\plugin\ckeditor\lang\sv.js" />
+    <Content Include="js\plugin\ckeditor\lang\th.js" />
+    <Content Include="js\plugin\ckeditor\lang\tr.js" />
+    <Content Include="js\plugin\ckeditor\lang\ug.js" />
+    <Content Include="js\plugin\ckeditor\lang\uk.js" />
+    <Content Include="js\plugin\ckeditor\lang\vi.js" />
+    <Content Include="js\plugin\ckeditor\lang\zh-cn.js" />
+    <Content Include="js\plugin\ckeditor\lang\zh.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="js\plugin\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="js\plugin\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="js\plugin\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="js\plugin\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="js\plugin\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="js\plugin\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="js\plugin\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="js\plugin\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="js\plugin\ckeditor\plugins\fakeobjects\images\spacer.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="js\plugin\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="js\plugin\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="js\plugin\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="js\plugin\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="js\plugin\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="js\plugin\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="js\plugin\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="js\plugin\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="js\plugin\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="js\plugin\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="js\plugin\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\icons.png" />
+    <Content Include="js\plugin\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="js\plugin\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="js\plugin\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="js\plugin\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="js\plugin\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="js\plugin\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="js\plugin\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="js\plugin\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="js\plugin\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="js\plugin\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="js\plugin\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="js\plugin\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="js\plugin\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="js\plugin\ckeditor\plugins\preview\preview.html" />
+    <Content Include="js\plugin\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="js\plugin\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="js\plugin\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="js\plugin\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="js\plugin\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="js\plugin\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="js\plugin\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="js\plugin\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="js\plugin\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="js\plugin\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="js\plugin\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="js\plugin\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="js\plugin\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="js\plugin\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="js\plugin\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="js\plugin\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="js\plugin\ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="js\plugin\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="js\plugin\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="js\plugin\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="js\plugin\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="js\plugin\ckeditor\plugins\wsc\dialogs\tmp.html" />
+    <Content Include="js\plugin\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="js\plugin\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="js\plugin\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="js\plugin\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="js\plugin\ckeditor\samples\ajax.html" />
+    <Content Include="js\plugin\ckeditor\samples\api.html" />
+    <Content Include="js\plugin\ckeditor\samples\appendto.html" />
+    <Content Include="js\plugin\ckeditor\samples\assets\inlineall\logo.png" />
+    <Content Include="js\plugin\ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="js\plugin\ckeditor\samples\assets\sample.css" />
+    <Content Include="js\plugin\ckeditor\samples\assets\sample.jpg" />
+    <Content Include="js\plugin\ckeditor\samples\assets\uilanguages\languages.js" />
+    <Content Include="js\plugin\ckeditor\samples\datafiltering.html" />
+    <Content Include="js\plugin\ckeditor\samples\divreplace.html" />
+    <Content Include="js\plugin\ckeditor\samples\index.html" />
+    <Content Include="js\plugin\ckeditor\samples\inlineall.html" />
+    <Content Include="js\plugin\ckeditor\samples\inlinebycode.html" />
+    <Content Include="js\plugin\ckeditor\samples\inlinetextarea.html" />
+    <Content Include="js\plugin\ckeditor\samples\jquery.html" />
+    <Content Include="js\plugin\ckeditor\samples\plugins\dialog\assets\my_dialog.js" />
+    <Content Include="js\plugin\ckeditor\samples\plugins\dialog\dialog.html" />
+    <Content Include="js\plugin\ckeditor\samples\plugins\enterkey\enterkey.html" />
+    <Content Include="js\plugin\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="js\plugin\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="js\plugin\ckeditor\samples\plugins\htmlwriter\outputforflash.html" />
+    <Content Include="js\plugin\ckeditor\samples\plugins\htmlwriter\outputhtml.html" />
+    <Content Include="js\plugin\ckeditor\samples\plugins\magicline\magicline.html" />
+    <Content Include="js\plugin\ckeditor\samples\plugins\toolbar\toolbar.html" />
+    <Content Include="js\plugin\ckeditor\samples\plugins\wysiwygarea\fullpage.html" />
+    <Content Include="js\plugin\ckeditor\samples\readonly.html" />
+    <Content Include="js\plugin\ckeditor\samples\replacebyclass.html" />
+    <Content Include="js\plugin\ckeditor\samples\replacebycode.html" />
+    <Content Include="js\plugin\ckeditor\samples\sample.css" />
+    <Content Include="js\plugin\ckeditor\samples\sample.js" />
+    <Content Include="js\plugin\ckeditor\samples\tabindex.html" />
+    <Content Include="js\plugin\ckeditor\samples\uicolor.html" />
+    <Content Include="js\plugin\ckeditor\samples\uilanguages.html" />
+    <Content Include="js\plugin\ckeditor\samples\xhtmlstyle.html" />
+    <Content Include="js\plugin\ckeditor\skins\moono\dialog.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\dialog_opera.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\editor.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="js\plugin\ckeditor\skins\moono\icons.png" />
+    <Content Include="js\plugin\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="js\plugin\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="js\plugin\ckeditor\skins\moono\images\close.png" />
+    <Content Include="js\plugin\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="js\plugin\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="js\plugin\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="js\plugin\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="js\plugin\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="js\plugin\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="js\plugin\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="js\plugin\ckeditor\styles.js" />
+    <Content Include="js\plugin\clockpicker\clockpicker.min.js" />
+    <Content Include="js\plugin\colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="js\plugin\cssemotions\jquery.cssemoticons.min.js" />
+    <Content Include="js\plugin\datatable-responsive\datatables.responsive.min.js" />
+    <Content Include="js\plugin\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="js\plugin\datatables\dataTables.colReorder.min.js" />
+    <Content Include="js\plugin\datatables\dataTables.colVis.min.js" />
+    <Content Include="js\plugin\datatables\dataTables.tableTools.min.js" />
+    <Content Include="js\plugin\datatables\jquery.dataTables.min.js" />
+    <Content Include="js\plugin\datatables\swf\copy_csv_xls.swf" />
+    <Content Include="js\plugin\datatables\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="js\plugin\delete-table-row\delete-table-row.min.js" />
+    <Content Include="js\plugin\dropzone\dropzone-amd-module.min.js" />
+    <Content Include="js\plugin\dropzone\dropzone.min.js" />
+    <Content Include="js\plugin\dygraphs\demo-data.min.js" />
+    <Content Include="js\plugin\dygraphs\dygraph-combined.min.js" />
+    <Content Include="js\plugin\easy-pie-chart\jquery.easy-pie-chart.min.js" />
+    <Content Include="js\plugin\fastclick\fastclick.min.js" />
+    <Content Include="js\plugin\flot\jquery.colorhelpers.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.canvas.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.categories.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.crosshair.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.cust.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.errorbars.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.fillbetween.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.image.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.navigate.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.orderBar.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.pie.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.resize.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.selection.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.stack.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.symbol.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.threshold.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.time.min.js" />
+    <Content Include="js\plugin\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="js\plugin\fuelux\wizard\wizard.min.js" />
+    <Content Include="js\plugin\fullcalendar\jquery.fullcalendar.min.js" />
+    <Content Include="js\plugin\gmap3\gmap3.min.js" />
+    <Content Include="js\plugin\ie-placeholder\jquery.placeholder.min.js" />
+    <Content Include="js\plugin\ie-placeholder_\jquery.placeholder.min.js" />
+    <Content Include="js\plugin\ion-slider\ion.rangeSlider.min.js" />
+    <Content Include="js\plugin\jcrop\jquery.color.min.js" />
+    <Content Include="js\plugin\jcrop\jquery.Jcrop.min.js" />
+    <Content Include="js\plugin\jqgrid\grid.locale-en.min.js" />
+    <Content Include="js\plugin\jqgrid\jquery.jqGrid.min.js" />
+    <Content Include="js\plugin\jquery-form\jquery-form.min.js" />
+    <Content Include="js\plugin\jquery-nestable\jquery.nestable.min.js" />
+    <Content Include="js\plugin\jquery-touch\jquery.ui.touch-punch.min.js" />
+    <Content Include="js\plugin\jquery-validate\jquery.validate.min.js" />
+    <Content Include="js\plugin\js-migrate\jquery-migrate-1.2.1.min.js" />
+    <Content Include="js\plugin\knob\jquery.knob.min.js" />
+    <Content Include="js\plugin\markdown\bootstrap-markdown.min.js" />
+    <Content Include="js\plugin\markdown\markdown.min.js" />
+    <Content Include="js\plugin\markdown\to-markdown.min.js" />
+    <Content Include="js\plugin\masked-input\jquery.maskedinput.min.js" />
+    <Content Include="js\plugin\maxlength\bootstrap-maxlength.min.js" />
+    <Content Include="js\plugin\moment\moment.min.js" />
+    <Content Include="js\plugin\morris\morris-chart-settings.min.js" />
+    <Content Include="js\plugin\morris\morris.min.js" />
+    <Content Include="js\plugin\morris\raphael.min.js" />
+    <Content Include="js\plugin\msie-fix\jquery.mb.browser.min.js" />
+    <Content Include="js\plugin\multiselect\bootstrap-multiselect.min.js" />
+    <Content Include="js\plugin\noUiSlider\jquery.nouislider.css" />
+    <Content Include="js\plugin\noUiSlider\jquery.nouislider.min.js" />
+    <Content Include="js\plugin\pace\pace.min.js" />
+    <Content Include="js\plugin\select2\readme.txt" />
+    <Content Include="js\plugin\select2\select2.min.js" />
+    <Content Include="js\plugin\selectToUISlider\selectToUISlider.jQuery.min.js" />
+    <Content Include="js\plugin\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="js\plugin\sparkline\jquery.sparkline.min.js" />
+    <Content Include="js\plugin\summernote\summernote.min.js" />
+    <Content Include="js\plugin\superbox\superbox.min.js" />
+    <Content Include="js\plugin\throttle-denounce\jquery.ba-throttle-debounce.min.js" />
+    <Content Include="js\plugin\typeahead\typeahead.min.js" />
+    <Content Include="js\plugin\typeahead\typeaheadjs.min.js" />
+    <Content Include="js\plugin\vectormap\jquery-jvectormap-1.1.1.css" />
+    <Content Include="js\plugin\vectormap\jquery-jvectormap-1.1.1.min.js" />
+    <Content Include="js\plugin\vectormap\jquery-jvectormap-1.2.2.css" />
+    <Content Include="js\plugin\vectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="js\plugin\vectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="js\plugin\x-editable\jquery.mockjax.min.js" />
+    <Content Include="js\plugin\x-editable\moment.min.js" />
+    <Content Include="js\plugin\x-editable\x-editable.min.js" />
+    <Content Include="js\smart-chat-ui\smart.chat.manager.min.js" />
+    <Content Include="js\smart-chat-ui\smart.chat.ui.min.js" />
+    <Content Include="js\smartwidgets\jarvis.widget.min.js" />
+    <Content Include="js\speech\voicecommand.min.js" />
+    <Content Include="LedgerReport.aspx" />
+    <Content Include="Lib\AjaxControlToolkit.dll" />
+    <Content Include="Lib\AjaxMin.dll" />
+    <Content Include="Lib\Ajax_Toolkit\AjaxControlToolkit.dll" />
+    <Content Include="Lib\Ajax_Toolkit\AjaxControlToolkit.pdb" />
+    <Content Include="Lib\Ajax_Toolkit\AjaxMin.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\de\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\de\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\de\System.Spatial.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\es\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\es\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\es\System.Spatial.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\fr\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\fr\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\fr\System.Spatial.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\HtmlAgilityPack.dll" />
+    <Content Include="Lib\Ajax_Toolkit\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\it\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\it\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\it\System.Spatial.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ja\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ja\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ja\System.Spatial.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ko\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ko\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ko\System.Spatial.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\LICENSE.txt" />
+    <Content Include="Lib\Ajax_Toolkit\Microsoft.Data.Edm.dll" />
+    <Content Include="Lib\Ajax_Toolkit\Microsoft.Data.Edm.xml" />
+    <Content Include="Lib\Ajax_Toolkit\Microsoft.Data.OData.dll" />
+    <Content Include="Lib\Ajax_Toolkit\Microsoft.Data.OData.xml" />
+    <Content Include="Lib\Ajax_Toolkit\Microsoft.WindowsAzure.Configuration.dll" />
+    <Content Include="Lib\Ajax_Toolkit\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="Lib\Ajax_Toolkit\Microsoft.WindowsAzure.Storage.xml" />
+    <Content Include="Lib\Ajax_Toolkit\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\pl\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ReadMe.html" />
+    <Content Include="Lib\Ajax_Toolkit\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ru\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ru\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\ru\System.Spatial.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\System.Spatial.dll" />
+    <Content Include="Lib\Ajax_Toolkit\System.Spatial.xml" />
+    <Content Include="Lib\Ajax_Toolkit\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\zh-Hans\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\zh-Hans\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\zh-Hans\System.Spatial.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\zh-Hant\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Lib\Ajax_Toolkit\zh-Hant\System.Spatial.resources.dll" />
+    <Content Include="Lib\TimePicker.dll" />
+    <Content Include="LogDetail.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="LoginHistory.aspx" />
+    <Content Include="LogOut.aspx" />
+    <Content Include="Log\ActivationLog.txt" />
+    <Content Include="Log\lycalog.txt" />
+    <Content Include="Log\Subscriberlog.txt" />
+    <Content Include="Log\Topup.txt" />
+    <Content Include="NetworkReplace.aspx" />
+    <Content Include="NetworkReplacement.aspx" />
+    <Content Include="NotesReport.aspx" />
+    <Content Include="Notification.aspx" />
+    <Content Include="NotificationMaster.aspx" />
+    <Content Include="PaymentDetail.aspx" />
+    <Content Include="paypal.aspx" />
+    <Content Include="Plans.aspx" />
+    <Content Include="PortinStatus.aspx" />
+    <Content Include="POS.aspx" />
+    <Content Include="POSView.aspx" />
+    <Content Include="Print.aspx" />
+    <Content Include="Purchase.aspx" />
+    <Content Include="PurchaseReport.aspx" />
+    <Content Include="Reacharge.aspx" />
+    <Content Include="RechargeActivationCancellation.aspx" />
+    <Content Include="RechargeBulk.aspx" />
+    <Content Include="RechargeFailReport.aspx" />
+    <Content Include="RechargePrint.aspx" />
+    <Content Include="RechargeRequestReport.aspx" />
+    <Content Include="RechargeSimReport.aspx" />
+    <Content Include="RechargeSuccess.aspx" />
+    <Content Include="Reports.aspx" />
+    <Content Include="Resetpassword.aspx" />
+    <Content Include="Role.aspx" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="RoleList.aspx" />
+    <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <Content Include="Format\BlankSIMPurchase.csv" />
+    <Content Include="Format\MobileSIMPurchase.csv" />
+    <Content Include="Lib\Ajax_Toolkit\AjaxControlToolkitSampleSite.zip" />
+    <Content Include="data\dataList.json" />
+    <Content Include="fonts\fontawesome4.2\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome4.2\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome4.2\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome4.2\FontAwesome.otf" />
+    <Content Include="js\libs\jquery-2.1.1.min.map" />
+    <Content Include="Scripts\php\demo-comment.php" />
+    <Content Include="Scripts\php\demo-contacts.php" />
+    <Content Include="Scripts\php\demo-register.php" />
+    <Content Include="Certificate\testankittest12018082438306GTS WIRELESS.docx" />
+    <Content Include="Certificate\testankittest201808248131JK INTERNATIONALS %283%29.docx" />
+    <Content Include="Certificate\testankittest201808249737JK INTERNATIONALS %282%29.docx" />
+    <Content Include="Certificate\testankittest22018082551484JK INTERNATIONALS %285%29.docx" />
+    <Content Include="Certificate\Utestankittest12018082441390GTS WIRELESS %281%29.docx" />
+    <Content Include="Certificate\Utestankittest1201808245345JK INTERNATIONALS %284%29.docx" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\AhPrepaid.pubxml" />
+    <Content Include="SalesReport.aspx" />
+    <Content Include="SalesReportForActivationAndPortIn.aspx" />
+    <Content Include="Scripts1\jquery-1.8.2.js" />
+    <Content Include="Scripts1\jquery1.10.3-ui.css" />
+    <Content Include="Scripts1\jquery1.10.3-ui.js" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Service References\LycaAPI\ENK.LycaAPI.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LycaAPI\ENK.LycaAPI.LycaAPIRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\LycaAPI\lycaapi.disco" />
+    <None Include="Service References\LycaAPI\configuration91.svcinfo" />
+    <None Include="Service References\LycaAPI\configuration.svcinfo" />
+    <None Include="Service References\LycaAPI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Service References\LycaAPI\lycaapi.wsdl" />
+    <Content Include="Service References\ServiceReference1\ENK.ServiceReference1.Distributor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReference1\Service1.disco" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceReference2\ENK.ServiceReference2.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference2\ENK.ServiceReference2.LycaAPIRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReference1\Service1.wsdl" />
+    <None Include="Service References\ServiceReference1\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference2\lycaapi.disco" />
+    <None Include="Service References\ServiceReference2\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference2\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SimDetails.aspx" />
+    <Content Include="SimHistoryReport.aspx" />
+    <Content Include="SimReplacement.aspx" />
+    <Content Include="SimReplacementApproved.aspx" />
+    <Content Include="SimSwap.aspx" />
+    <Content Include="SimTariffMapping.aspx" />
+    <Content Include="sound\bigbox.mp3" />
+    <Content Include="sound\license.txt" />
+    <Content Include="sound\messagebox.mp3" />
+    <Content Include="sound\smallbox.mp3" />
+    <Content Include="sound\voice_alert.mp3" />
+    <Content Include="sound\voice_off.mp3" />
+    <Content Include="sound\voice_on.mp3" />
+    <Content Include="StockTransferReport.aspx" />
+    <Content Include="SubscriberEasygoPortIn.aspx" />
+    <Content Include="SubscriberEasygoSim.aspx" />
+    <Content Include="SubscriberH2OPortIn.aspx" />
+    <Content Include="SubscriberH2OSim.aspx" />
+    <Content Include="SubscriberRecharge.aspx" />
+    <Content Include="SubscriberSim.aspx" />
+    <Content Include="SubscriberPortin.aspx" />
+    <Content Include="Success.aspx" />
+    <Content Include="SuscriberLog.aspx" />
+    <Content Include="TariffGroup.aspx" />
+    <Content Include="TariffGroupN.aspx" />
+    <Content Include="TestAPI.aspx" />
+    <Content Include="TestPage.aspx" />
+    <Content Include="TestPaypal.aspx" />
+    <Content Include="Topup.aspx" />
+    <Content Include="TopupLedger.aspx" />
+    <Content Include="TopupReport.aspx" />
+    <Content Include="Transactions.aspx" />
+    <Content Include="UploadITGFile.aspx" />
+    <Content Include="Userxyx.aspx" />
+    <Content Include="Vendor.aspx" />
+    <Content Include="VendorView.aspx" />
+    <Content Include="ViewNotificationList.aspx" />
+    <Content Include="ViewPlanDetails.aspx" />
+    <Content Include="xml\gmap\pins.xml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="User.aspx" />
+    <Content Include="UserList.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivatePreloadedSim.aspx.cs">
+      <DependentUpon>ActivatePreloadedSim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivatePreloadedSim.aspx.designer.cs">
+      <DependentUpon>ActivatePreloadedSim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationDetails.aspx.cs">
+      <DependentUpon>ActivationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivationDetails.aspx.designer.cs">
+      <DependentUpon>ActivationDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationFailedReport.aspx.cs">
+      <DependentUpon>ActivationFailedReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivationFailedReport.aspx.designer.cs">
+      <DependentUpon>ActivationFailedReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationLegderReport.aspx.cs">
+      <DependentUpon>ActivationLegderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivationLegderReport.aspx.designer.cs">
+      <DependentUpon>ActivationLegderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApiMapping.aspx.cs">
+      <DependentUpon>ApiMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApiMapping.aspx.designer.cs">
+      <DependentUpon>ApiMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Banner.aspx.cs">
+      <DependentUpon>Banner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Banner.aspx.designer.cs">
+      <DependentUpon>Banner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommissionReport.aspx.cs">
+      <DependentUpon>CommissionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommissionReport.aspx.designer.cs">
+      <DependentUpon>CommissionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Emailer.aspx.cs">
+      <DependentUpon>Emailer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Emailer.aspx.designer.cs">
+      <DependentUpon>Emailer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ENKEmailer.aspx.cs">
+      <DependentUpon>ENKEmailer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ENKEmailer.aspx.designer.cs">
+      <DependentUpon>ENKEmailer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalRecharge.aspx.cs">
+      <DependentUpon>GlobalRecharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlobalRecharge.aspx.designer.cs">
+      <DependentUpon>GlobalRecharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H2ORecharge.aspx.cs">
+      <DependentUpon>H2ORecharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H2ORecharge.aspx.designer.cs">
+      <DependentUpon>H2ORecharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H2OSimActivation.aspx.cs">
+      <DependentUpon>H2OSimActivation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H2OSimActivation.aspx.designer.cs">
+      <DependentUpon>H2OSimActivation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IccidMsisdnSearch.aspx.cs">
+      <DependentUpon>IccidMsisdnSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IccidMsisdnSearch.aspx.designer.cs">
+      <DependentUpon>IccidMsisdnSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IpMapping.aspx.cs">
+      <DependentUpon>IpMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IpMapping.aspx.designer.cs">
+      <DependentUpon>IpMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeActivationCancelReport.aspx.cs">
+      <DependentUpon>RechargeActivationCancelReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RechargeActivationCancelReport.aspx.designer.cs">
+      <DependentUpon>RechargeActivationCancelReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LycaRecharge.aspx.cs">
+      <DependentUpon>LycaRecharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LycaRecharge.aspx.designer.cs">
+      <DependentUpon>LycaRecharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationSim.aspx.cs">
+      <DependentUpon>ActivationSim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivationSim.aspx.designer.cs">
+      <DependentUpon>ActivationSim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationPortin.aspx.cs">
+      <DependentUpon>ActivationPortin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivationPortin.aspx.designer.cs">
+      <DependentUpon>ActivationPortin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationSIMReport.aspx.cs">
+      <DependentUpon>ActivationSIMReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivationSIMReport.aspx.designer.cs">
+      <DependentUpon>ActivationSIMReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationStatus.aspx.cs">
+      <DependentUpon>ActivationStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivationStatus.aspx.designer.cs">
+      <DependentUpon>ActivationStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddDistributor.aspx.cs">
+      <DependentUpon>AddDistributor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddDistributor.aspx.designer.cs">
+      <DependentUpon>AddDistributor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AndroidGCMPushNotification.cs" />
+    <Compile Include="AndroidRecharge.aspx.cs">
+      <DependentUpon>AndroidRecharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AndroidRecharge.aspx.designer.cs">
+      <DependentUpon>AndroidRecharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AndroidRechargeFail.aspx.cs">
+      <DependentUpon>AndroidRechargeFail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AndroidRechargeFail.aspx.designer.cs">
+      <DependentUpon>AndroidRechargeFail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AndroidRechargeSuccess.aspx.cs">
+      <DependentUpon>AndroidRechargeSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AndroidRechargeSuccess.aspx.designer.cs">
+      <DependentUpon>AndroidRechargeSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="APIError.aspx.cs">
+      <DependentUpon>APIError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\paypalfunctions %281%29.cs" />
+    <Compile Include="approvals.aspx.cs">
+      <DependentUpon>approvals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="approvals.aspx.designer.cs">
+      <DependentUpon>approvals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Createplans.aspx.cs">
+      <DependentUpon>Createplans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Createplans.aspx.designer.cs">
+      <DependentUpon>Createplans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTariffGroup.aspx.cs">
+      <DependentUpon>CreateTariffGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateTariffGroup.aspx.designer.cs">
+      <DependentUpon>CreateTariffGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Currency.aspx.cs">
+      <DependentUpon>Currency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Currency.aspx.designer.cs">
+      <DependentUpon>Currency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyView.aspx.cs">
+      <DependentUpon>CurrencyView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CurrencyView.aspx.designer.cs">
+      <DependentUpon>CurrencyView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataRowContainers.cs" />
+    <Compile Include="DataTableJoinHelper.cs" />
+    <Compile Include="DecryptPassword.aspx.cs">
+      <DependentUpon>DecryptPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DecryptPassword.aspx.designer.cs">
+      <DependentUpon>DecryptPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeductReport.aspx.cs">
+      <DependentUpon>DeductReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeductReport.aspx.designer.cs">
+      <DependentUpon>DeductReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DistributorNotes.aspx.cs">
+      <DependentUpon>DistributorNotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DistributorNotes.aspx.designer.cs">
+      <DependentUpon>DistributorNotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DistributorPlanMappingChange.aspx.cs">
+      <DependentUpon>DistributorPlanMappingChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DistributorPlanMappingChange.aspx.designer.cs">
+      <DependentUpon>DistributorPlanMappingChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DistributorView.aspx.cs">
+      <DependentUpon>DistributorView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DistributorView.aspx.designer.cs">
+      <DependentUpon>DistributorView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Encryption.cs" />
+    <Compile Include="ExcelImport.aspx.cs">
+      <DependentUpon>ExcelImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExcelImport.aspx.designer.cs">
+      <DependentUpon>ExcelImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="expresscheckout.aspx.cs">
+      <DependentUpon>expresscheckout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fail.aspx.cs">
+      <DependentUpon>Fail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fail.aspx.designer.cs">
+      <DependentUpon>Fail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryAccept.aspx.cs">
+      <DependentUpon>InventoryAccept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryAccept.aspx.designer.cs">
+      <DependentUpon>InventoryAccept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryPurchaseReport.aspx.cs">
+      <DependentUpon>InventoryPurchaseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryPurchaseReport.aspx.designer.cs">
+      <DependentUpon>InventoryPurchaseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryStatusReport.aspx.cs">
+      <DependentUpon>InventoryStatusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryStatusReport.aspx.designer.cs">
+      <DependentUpon>InventoryStatusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryTransfer.aspx.cs">
+      <DependentUpon>InventoryTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryTransfer.aspx.designer.cs">
+      <DependentUpon>InventoryTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerReport.aspx.cs">
+      <DependentUpon>LedgerReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LedgerReport.aspx.designer.cs">
+      <DependentUpon>LedgerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogDetail.aspx.cs">
+      <DependentUpon>LogDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogDetail.aspx.designer.cs">
+      <DependentUpon>LogDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginHistory.aspx.cs">
+      <DependentUpon>LoginHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginHistory.aspx.designer.cs">
+      <DependentUpon>LoginHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster.Master.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster.Master.designer.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkReplace.aspx.cs">
+      <DependentUpon>NetworkReplace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NetworkReplace.aspx.designer.cs">
+      <DependentUpon>NetworkReplace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkReplacement.aspx.cs">
+      <DependentUpon>NetworkReplacement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NetworkReplacement.aspx.designer.cs">
+      <DependentUpon>NetworkReplacement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotesReport.aspx.cs">
+      <DependentUpon>NotesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotesReport.aspx.designer.cs">
+      <DependentUpon>NotesReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.aspx.cs">
+      <DependentUpon>Notification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notification.aspx.designer.cs">
+      <DependentUpon>Notification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationMaster.aspx.cs">
+      <DependentUpon>NotificationMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotificationMaster.aspx.designer.cs">
+      <DependentUpon>NotificationMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentDetail.aspx.cs">
+      <DependentUpon>PaymentDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentDetail.aspx.designer.cs">
+      <DependentUpon>PaymentDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paypal.aspx.cs">
+      <DependentUpon>paypal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paypal.aspx.designer.cs">
+      <DependentUpon>paypal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayPalHelper.cs" />
+    <Compile Include="Plans.aspx.cs">
+      <DependentUpon>Plans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plans.aspx.designer.cs">
+      <DependentUpon>Plans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortinStatus.aspx.cs">
+      <DependentUpon>PortinStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortinStatus.aspx.designer.cs">
+      <DependentUpon>PortinStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="POS.aspx.cs">
+      <DependentUpon>POS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="POS.aspx.designer.cs">
+      <DependentUpon>POS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="POSView.aspx.cs">
+      <DependentUpon>POSView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="POSView.aspx.designer.cs">
+      <DependentUpon>POSView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Print.aspx.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print.aspx.designer.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase.aspx.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase.aspx.designer.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReport.aspx.cs">
+      <DependentUpon>PurchaseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport.aspx.designer.cs">
+      <DependentUpon>PurchaseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reacharge.aspx.cs">
+      <DependentUpon>Reacharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reacharge.aspx.designer.cs">
+      <DependentUpon>Reacharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeActivationCancellation.aspx.cs">
+      <DependentUpon>RechargeActivationCancellation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RechargeActivationCancellation.aspx.designer.cs">
+      <DependentUpon>RechargeActivationCancellation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeBulk.aspx.cs">
+      <DependentUpon>RechargeBulk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RechargeBulk.aspx.designer.cs">
+      <DependentUpon>RechargeBulk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeFailReport.aspx.cs">
+      <DependentUpon>RechargeFailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RechargeFailReport.aspx.designer.cs">
+      <DependentUpon>RechargeFailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RechargePrint.aspx.cs">
+      <DependentUpon>RechargePrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RechargePrint.aspx.designer.cs">
+      <DependentUpon>RechargePrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeRequestReport.aspx.cs">
+      <DependentUpon>RechargeRequestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RechargeRequestReport.aspx.designer.cs">
+      <DependentUpon>RechargeRequestReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeSimReport.aspx.cs">
+      <DependentUpon>RechargeSimReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RechargeSimReport.aspx.designer.cs">
+      <DependentUpon>RechargeSimReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeSuccess.aspx.cs">
+      <DependentUpon>RechargeSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RechargeSuccess.aspx.designer.cs">
+      <DependentUpon>RechargeSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Resetpassword.aspx.cs">
+      <DependentUpon>Resetpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resetpassword.aspx.designer.cs">
+      <DependentUpon>Resetpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Role.aspx.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Role.aspx.designer.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoleList.aspx.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoleList.aspx.designer.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport.aspx.cs">
+      <DependentUpon>SalesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReport.aspx.designer.cs">
+      <DependentUpon>SalesReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReportForActivationAndPortIn.aspx.cs">
+      <DependentUpon>SalesReportForActivationAndPortIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReportForActivationAndPortIn.aspx.designer.cs">
+      <DependentUpon>SalesReportForActivationAndPortIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LycaAPI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SimDetails.aspx.cs">
+      <DependentUpon>SimDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimDetails.aspx.designer.cs">
+      <DependentUpon>SimDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimHistoryReport.aspx.cs">
+      <DependentUpon>SimHistoryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimHistoryReport.aspx.designer.cs">
+      <DependentUpon>SimHistoryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimReplacement.aspx.cs">
+      <DependentUpon>SimReplacement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimReplacement.aspx.designer.cs">
+      <DependentUpon>SimReplacement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimReplacementApproved.aspx.cs">
+      <DependentUpon>SimReplacementApproved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimReplacementApproved.aspx.designer.cs">
+      <DependentUpon>SimReplacementApproved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimSwap.aspx.cs">
+      <DependentUpon>SimSwap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimSwap.aspx.designer.cs">
+      <DependentUpon>SimSwap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimTariffMapping.aspx.cs">
+      <DependentUpon>SimTariffMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimTariffMapping.aspx.designer.cs">
+      <DependentUpon>SimTariffMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockTransferReport.aspx.cs">
+      <DependentUpon>StockTransferReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockTransferReport.aspx.designer.cs">
+      <DependentUpon>StockTransferReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubscriberEasygoPortIn.aspx.cs">
+      <DependentUpon>SubscriberEasygoPortIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubscriberEasygoPortIn.aspx.designer.cs">
+      <DependentUpon>SubscriberEasygoPortIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubscriberEasygoSim.aspx.cs">
+      <DependentUpon>SubscriberEasygoSim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubscriberEasygoSim.aspx.designer.cs">
+      <DependentUpon>SubscriberEasygoSim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubscriberH2OPortIn.aspx.cs">
+      <DependentUpon>SubscriberH2OPortIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubscriberH2OPortIn.aspx.designer.cs">
+      <DependentUpon>SubscriberH2OPortIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubscriberH2OSim.aspx.cs">
+      <DependentUpon>SubscriberH2OSim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubscriberH2OSim.aspx.designer.cs">
+      <DependentUpon>SubscriberH2OSim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubscriberRecharge.aspx.cs">
+      <DependentUpon>SubscriberRecharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubscriberRecharge.aspx.designer.cs">
+      <DependentUpon>SubscriberRecharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubscriberSim.aspx.cs">
+      <DependentUpon>SubscriberSim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubscriberSim.aspx.designer.cs">
+      <DependentUpon>SubscriberSim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubscriberPortin.aspx.cs">
+      <DependentUpon>SubscriberPortin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubscriberPortin.aspx.designer.cs">
+      <DependentUpon>SubscriberPortin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuscriberLog.aspx.cs">
+      <DependentUpon>SuscriberLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuscriberLog.aspx.designer.cs">
+      <DependentUpon>SuscriberLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TariffGroup.aspx.cs">
+      <DependentUpon>TariffGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TariffGroup.aspx.designer.cs">
+      <DependentUpon>TariffGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TariffGroupN.aspx.cs">
+      <DependentUpon>TariffGroupN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TariffGroupN.aspx.designer.cs">
+      <DependentUpon>TariffGroupN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestAPI.aspx.cs">
+      <DependentUpon>TestAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestAPI.aspx.designer.cs">
+      <DependentUpon>TestAPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestPaypal.aspx.cs">
+      <DependentUpon>TestPaypal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPaypal.aspx.designer.cs">
+      <DependentUpon>TestPaypal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topup.aspx.cs">
+      <DependentUpon>Topup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topup.aspx.designer.cs">
+      <DependentUpon>Topup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopupLedger.aspx.cs">
+      <DependentUpon>TopupLedger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopupLedger.aspx.designer.cs">
+      <DependentUpon>TopupLedger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopupReport.aspx.cs">
+      <DependentUpon>TopupReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopupReport.aspx.designer.cs">
+      <DependentUpon>TopupReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions.aspx.cs">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transactions.aspx.designer.cs">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadITGFile.aspx.cs">
+      <DependentUpon>UploadITGFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadITGFile.aspx.designer.cs">
+      <DependentUpon>UploadITGFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Userxyx.aspx.cs">
+      <DependentUpon>Userxyx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Userxyx.aspx.designer.cs">
+      <DependentUpon>Userxyx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor.aspx.cs">
+      <DependentUpon>Vendor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor.aspx.designer.cs">
+      <DependentUpon>Vendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VendorView.aspx.cs">
+      <DependentUpon>VendorView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VendorView.aspx.designer.cs">
+      <DependentUpon>VendorView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewNotificationList.aspx.cs">
+      <DependentUpon>ViewNotificationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewNotificationList.aspx.designer.cs">
+      <DependentUpon>ViewNotificationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPlanDetails.aspx.cs">
+      <DependentUpon>ViewPlanDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPlanDetails.aspx.designer.cs">
+      <DependentUpon>ViewPlanDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\net.emida.ws\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WriteH2ORequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MainMaster.Master" />
+    <Content Include="ajax\demowidget.php" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="img\jqueryui\index.php" />
+    <Content Include="img\pattern\index.php" />
+    <Content Include="js\plugin\ckeditor\CHANGES.md" />
+    <Content Include="js\plugin\ckeditor\LICENSE.md" />
+    <Content Include="js\plugin\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="js\plugin\ckeditor\plugins\scayt\README.md" />
+    <Content Include="js\plugin\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="js\plugin\ckeditor\plugins\wsc\README.md" />
+    <Content Include="js\plugin\ckeditor\README.md" />
+    <Content Include="js\plugin\ckeditor\samples\assets\posteddata.php" />
+    <Content Include="js\plugin\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="js\plugin\ckeditor\samples\sample_posteddata.php" />
+    <Content Include="js\plugin\ckeditor\skins\moono\readme.md" />
+    <Content Include="Web References\net.emida.ws\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\net.emida.ws\webServices.wsdl" />
+    <Content Include="sound\bigbox.ogg" />
+    <Content Include="sound\messagebox.ogg" />
+    <Content Include="sound\smallbox.ogg" />
+    <Content Include="sound\voice_alert.ogg" />
+    <Content Include="sound\voice_off.ogg" />
+    <Content Include="sound\voice_on.ogg" />
+    <None Include="Service References\ServiceReference2\lycaapi.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://ws.emida.net:444/soap/webServices.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\net.emida.ws\</RelPath>
+      <UpdateFromURL>https://ws.emida.net:444/soap/webServices.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AHPrepaid_net_emida_ws_webServicesService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LycaAPI\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documents\" />
+    <Folder Include="Image\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54728</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,2334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="urn:debisys-soap-services" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="urn:debisys-soap-services" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:debisys-soap-services" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="NOCOperationRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="addressWebService" type="xsd:string" />
+    <wsdl:part name="queryString" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="setTagNewCreditAfterTransactionResponse" />
+  <wsdl:message name="CardSaleResponse">
+    <wsdl:part name="CardSaleReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckTrxByIdRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="trxId" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="QuippiCreatePINResponse">
+    <wsdl:part name="QuippiCreatePINReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LocusActivateCDMAsimResponse">
+    <wsdl:part name="LocusActivateCDMAsimReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionsResponse">
+    <wsdl:part name="GetTransactionsReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueBalanceRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="cardNumber" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckTBIDRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CardBalanceResponse">
+    <wsdl:part name="CardBalanceReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountBalanceRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="merchantId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductUFeeResponse">
+    <wsdl:part name="GetProductUFeeReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CommTestResponse">
+    <wsdl:part name="CommTestReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DMCPortInActivationRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="producIdSim" type="xsd:string" />
+    <wsdl:part name="productIdPin" type="xsd:string" />
+    <wsdl:part name="address1" type="xsd:string" />
+    <wsdl:part name="address2" type="xsd:string" />
+    <wsdl:part name="city" type="xsd:string" />
+    <wsdl:part name="state" type="xsd:string" />
+    <wsdl:part name="zipCode" type="xsd:string" />
+    <wsdl:part name="contactNumber" type="xsd:string" />
+    <wsdl:part name="corpId" type="xsd:string" />
+    <wsdl:part name="dateOfBirth" type="xsd:string" />
+    <wsdl:part name="email" type="xsd:string" />
+    <wsdl:part name="firstName" type="xsd:string" />
+    <wsdl:part name="lastName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="securityQuestionId" type="xsd:string" />
+    <wsdl:part name="securityQuestionAnswer" type="xsd:string" />
+    <wsdl:part name="serviceZipCode" type="xsd:string" />
+    <wsdl:part name="esn" type="xsd:string" />
+    <wsdl:part name="mdn" type="xsd:string" />
+    <wsdl:part name="passCode" type="xsd:string" />
+    <wsdl:part name="sn" type="xsd:string" />
+    <wsdl:part name="iccid" type="xsd:string" />
+    <wsdl:part name="portAccountNo" type="xsd:string" />
+    <wsdl:part name="portBusinessName" type="xsd:string" />
+    <wsdl:part name="portCity" type="xsd:string" />
+    <wsdl:part name="portFirstName" type="xsd:string" />
+    <wsdl:part name="portLastName" type="xsd:string" />
+    <wsdl:part name="portMdn" type="xsd:string" />
+    <wsdl:part name="portPasswordPin" type="xsd:string" />
+    <wsdl:part name="portState" type="xsd:string" />
+    <wsdl:part name="portStreetName" type="xsd:string" />
+    <wsdl:part name="portStreetNo" type="xsd:string" />
+    <wsdl:part name="portZip" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="carrierId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTransTypeListResponse">
+    <wsdl:part name="GetTransTypeListReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistSale_XBorderResponse">
+    <wsdl:part name="PinDistSale_XBorderReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistSale_XBorder_01Request">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="originCountry" type="xsd:string" />
+    <wsdl:part name="destinationCountry" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="transType" type="xsd:int" />
+    <wsdl:part name="ipAddress" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="checkMerchantPaymentRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="merchantID" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="refNumber" type="xsd:string" />
+    <wsdl:part name="userName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="postRequestRequest">
+    <wsdl:part name="request" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DMCDeviceCheckRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="esn" type="xsd:string" />
+    <wsdl:part name="carrierId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LookUpBillPaymentMxByInvocieNoRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitPaymentNotificationResponse">
+    <wsdl:part name="SubmitPaymentNotificationReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CardRefundRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LookUpTransactionByInvocieNoResponse">
+    <wsdl:part name="LookUpTransactionByInvocieNoReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GiftCardQueryFeeResponse">
+    <wsdl:part name="GiftCardQueryFeeReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckTransactionByInvoiceNoResponse">
+    <wsdl:part name="CheckTransactionByInvoiceNoReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaModifyPortInResponse">
+    <wsdl:part name="LycaModifyPortInReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaModifyPortInRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="siteId" type="xsd:string" />
+    <wsdl:part name="clerkID" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="referenceNumber" type="xsd:string" />
+    <wsdl:part name="portInNumber" type="xsd:string" />
+    <wsdl:part name="portInSIMNumber" type="xsd:string" />
+    <wsdl:part name="portInAccountNumber" type="xsd:string" />
+    <wsdl:part name="portInPasswordPin" type="xsd:string" />
+    <wsdl:part name="portInZipCode" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DMCPortInActivationResponse">
+    <wsdl:part name="DMCPortInActivationReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistSaleTicketRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="transactionId" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPinProductsForActivationRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="activationProductId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBillPaymentBalanceResponse">
+    <wsdl:part name="GetBillPaymentBalanceReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DoSimActivationCDMA1Request">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="producIdSim" type="xsd:string" />
+    <wsdl:part name="amountSim" type="xsd:string" />
+    <wsdl:part name="productIdPin" type="xsd:string" />
+    <wsdl:part name="amountPin" type="xsd:string" />
+    <wsdl:part name="esn" type="xsd:string" />
+    <wsdl:part name="zipCode" type="xsd:string" />
+    <wsdl:part name="netWorkType" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaActivationRTRRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="sim" type="xsd:string" />
+    <wsdl:part name="zipCode" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="contactEmail" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoice" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaActivationPinRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="sim" type="xsd:string" />
+    <wsdl:part name="zipCode" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="contactEmail" type="xsd:string" />
+    <wsdl:part name="plan" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoice" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LocusActivateCDMAsimRequest">
+    <wsdl:part name="siteId" type="xsd:string" />
+    <wsdl:part name="pinProductId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="activationProductId" type="xsd:string" />
+    <wsdl:part name="languageId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="esn" type="xsd:string" />
+    <wsdl:part name="npa" type="xsd:string" />
+    <wsdl:part name="sim" type="xsd:string" />
+    <wsdl:part name="city" type="xsd:string" />
+    <wsdl:part name="zip" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ApplyPaymentISOLevelRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="merchantID" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="description" type="xsd:string" />
+    <wsdl:part name="refNumber" type="xsd:string" />
+    <wsdl:part name="userName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckTerminalRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueActivateRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="serialNumber" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductUFeeRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PINReturnRequestRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="QuippiRedeemRequest">
+    <wsdl:part name="Version" type="xsd:string" />
+    <wsdl:part name="SiteID" type="xsd:string" />
+    <wsdl:part name="ClerkID" type="xsd:string" />
+    <wsdl:part name="PIN" type="xsd:string" />
+    <wsdl:part name="LocationID" type="xsd:string" />
+    <wsdl:part name="PosID" type="xsd:string" />
+    <wsdl:part name="PosOperatorID" type="xsd:string" />
+    <wsdl:part name="RecipientID" type="xsd:string" />
+    <wsdl:part name="InvoiceNo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListExtResponse">
+    <wsdl:part name="GetProductListExtReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="BillPaymentResponse">
+    <wsdl:part name="BillPaymentReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SaleAsyncRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+    <wsdl:part name="regCode" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="QuippiCreatePINRequest">
+    <wsdl:part name="Version" type="xsd:string" />
+    <wsdl:part name="SiteID" type="xsd:string" />
+    <wsdl:part name="ClerkID" type="xsd:string" />
+    <wsdl:part name="ProductID" type="xsd:string" />
+    <wsdl:part name="Amount" type="xsd:string" />
+    <wsdl:part name="SenderMobile" type="xsd:string" />
+    <wsdl:part name="SendeFirstName" type="xsd:string" />
+    <wsdl:part name="SenderLastName" type="xsd:string" />
+    <wsdl:part name="RecipientFirstName" type="xsd:string" />
+    <wsdl:part name="RecipientLastName" type="xsd:string" />
+    <wsdl:part name="ExternalFx" type="xsd:string" />
+    <wsdl:part name="InvoiceNo" type="xsd:string" />
+    <wsdl:part name="LanguageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductFeeRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LocusActivateCDMAesnRequest">
+    <wsdl:part name="siteId" type="xsd:string" />
+    <wsdl:part name="pinProductId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="activationProductId" type="xsd:string" />
+    <wsdl:part name="languageId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="esn" type="xsd:string" />
+    <wsdl:part name="npa" type="xsd:string" />
+    <wsdl:part name="city" type="xsd:string" />
+    <wsdl:part name="zip" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="Login2Request">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="userName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueBalanceResponse">
+    <wsdl:part name="StoredValueBalanceReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaPortInDetailsRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="siteId" type="xsd:string" />
+    <wsdl:part name="clerkID" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="referenceType" type="xsd:string" />
+    <wsdl:part name="referenceNumber" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="TransactionsDetailsForDayRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="dayDate" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCarrierListResponse">
+    <wsdl:part name="GetCarrierListReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendNotificationRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="emails" type="xsd:string" />
+    <wsdl:part name="messages" type="xsd:string" />
+    <wsdl:part name="subject" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="TransRefundRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistRefundRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="BillPaymentInfoMxResponse">
+    <wsdl:part name="BillPaymentInfoMxReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ApplyPaymentISOLevelResponse">
+    <wsdl:part name="ApplyPaymentISOLevelReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="validateLoginSecurityResponse">
+    <wsdl:part name="validateLoginSecurityReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTerminalBalanceResponse">
+    <wsdl:part name="GetTerminalBalanceReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckTrxByIdResponse">
+    <wsdl:part name="CheckTrxByIdReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GiftCardDeactivateResponse">
+    <wsdl:part name="GiftCardDeactivateReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="TransRefundResponse">
+    <wsdl:part name="TransRefundReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaCheckPortInEligibilityResponse">
+    <wsdl:part name="LycaCheckPortInEligibilityReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueDeactivateRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="transactionId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="BillPaymentInfoMxRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductFeeResponse">
+    <wsdl:part name="GetProductFeeReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryListRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="transTypeId" type="xsd:string" />
+    <wsdl:part name="carrierId" type="xsd:string" />
+    <wsdl:part name="categoryId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueQueryFeeRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="operation" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckProviderStatusResponse">
+    <wsdl:part name="CheckProviderStatusReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LocusActivateGSMsimRequest">
+    <wsdl:part name="siteId" type="xsd:string" />
+    <wsdl:part name="pinProductId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="activationProductId" type="xsd:string" />
+    <wsdl:part name="languageId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="npa" type="xsd:string" />
+    <wsdl:part name="sim" type="xsd:string" />
+    <wsdl:part name="city" type="xsd:string" />
+    <wsdl:part name="zip" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DMCDeviceCheckResponse">
+    <wsdl:part name="DMCDeviceCheckReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistSale_XBorder_01Response">
+    <wsdl:part name="PinDistSale_XBorder_01Return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetQuippiFxRateRequest">
+    <wsdl:part name="Version" type="xsd:string" />
+    <wsdl:part name="SiteID" type="xsd:string" />
+    <wsdl:part name="ClerkID" type="xsd:string" />
+    <wsdl:part name="ProductID" type="xsd:string" />
+    <wsdl:part name="Amount" type="xsd:string" />
+    <wsdl:part name="InvoiceNo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="TransactionConfirmResponse">
+    <wsdl:part name="TransactionConfirmReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="BillPaymentSaleMxRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="fields" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryListResponse">
+    <wsdl:part name="GetCategoryListReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistSaleResponse">
+    <wsdl:part name="PinDistSaleReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaPortinPinResponse">
+    <wsdl:part name="LycaPortinPinReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="QuippiCancelPINResponse">
+    <wsdl:part name="QuippiCancelPINReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCarrierListRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="transTypeId" type="xsd:string" />
+    <wsdl:part name="carrierId" type="xsd:string" />
+    <wsdl:part name="categoryId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckProviderStatusRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionsRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="numberOfTransactions" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getTagNewCreditAfterTransactionRequest" />
+  <wsdl:message name="CardBalanceRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetQuippiFxRateResponse">
+    <wsdl:part name="GetQuippiFxRateReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="userName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBProductListResponse">
+    <wsdl:part name="GetBProductListReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="QuippiAuthorizeResponse">
+    <wsdl:part name="QuippiAuthorizeReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistSaleUSSDResponse">
+    <wsdl:part name="PinDistSaleUSSDReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="BillPaymentUserFeeRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="account" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueRefundRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="transactionId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsProvidersLimitsResponse">
+    <wsdl:part name="GetProductsProvidersLimitsReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="transTypeId" type="xsd:string" />
+    <wsdl:part name="carrierId" type="xsd:string" />
+    <wsdl:part name="categoryId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GiftCardDeactivateRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="transactionId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getTagNewCreditAfterTransactionResponse">
+    <wsdl:part name="getTagNewCreditAfterTransactionReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DoSimActivationCDMA1Response">
+    <wsdl:part name="DoSimActivationCDMA1Return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaPortinRTRResponse">
+    <wsdl:part name="LycaPortinRTRReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ApplyPaymentAgentLevelRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="merchantID" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="description" type="xsd:string" />
+    <wsdl:part name="refNumber" type="xsd:string" />
+    <wsdl:part name="userName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueActivateResponse">
+    <wsdl:part name="StoredValueActivateReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DMCActivationRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="producIdSim" type="xsd:string" />
+    <wsdl:part name="productIdPin" type="xsd:string" />
+    <wsdl:part name="address1" type="xsd:string" />
+    <wsdl:part name="address2" type="xsd:string" />
+    <wsdl:part name="city" type="xsd:string" />
+    <wsdl:part name="state" type="xsd:string" />
+    <wsdl:part name="zipCode" type="xsd:string" />
+    <wsdl:part name="contactNumber" type="xsd:string" />
+    <wsdl:part name="corpId" type="xsd:string" />
+    <wsdl:part name="dateOfBirth" type="xsd:string" />
+    <wsdl:part name="email" type="xsd:string" />
+    <wsdl:part name="firstName" type="xsd:string" />
+    <wsdl:part name="lastName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="securityQuestionId" type="xsd:string" />
+    <wsdl:part name="securityQuestionAnswer" type="xsd:string" />
+    <wsdl:part name="serviceZipCode" type="xsd:string" />
+    <wsdl:part name="passcode" type="xsd:string" />
+    <wsdl:part name="sn" type="xsd:string" />
+    <wsdl:part name="iccid" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="carrierId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTransTypeListRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="transTypeId" type="xsd:string" />
+    <wsdl:part name="carrierId" type="xsd:string" />
+    <wsdl:part name="categoryId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="QuippiRedeemResponse">
+    <wsdl:part name="QuippiRedeemReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LogoutResponse">
+    <wsdl:part name="LogoutReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LookupQuippiTransactionByInvoiceNoRequest">
+    <wsdl:part name="Version" type="xsd:string" />
+    <wsdl:part name="SiteID" type="xsd:string" />
+    <wsdl:part name="ClerkID" type="xsd:string" />
+    <wsdl:part name="ProductID" type="xsd:string" />
+    <wsdl:part name="Amount" type="xsd:string" />
+    <wsdl:part name="OriginalInvoiceNo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistRefundResponse">
+    <wsdl:part name="PinDistRefundReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DMCActivationResponse">
+    <wsdl:part name="DMCActivationReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckClerkRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountBalanceResponse">
+    <wsdl:part name="GetAccountBalanceReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckTransactionByInvoiceNoRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PINReturnRequestResponse">
+    <wsdl:part name="PINReturnRequestReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendNotificationResponse">
+    <wsdl:part name="sendNotificationReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LogoutRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="userName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginResponse">
+    <wsdl:part name="LoginReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="checkMerchantPaymentResponse">
+    <wsdl:part name="checkMerchantPaymentReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GiftCardActivateRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="serialNumber" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GiftCardActivateResponse">
+    <wsdl:part name="GiftCardActivateReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="QuippiAuthorizeRequest">
+    <wsdl:part name="Version" type="xsd:string" />
+    <wsdl:part name="SiteID" type="xsd:string" />
+    <wsdl:part name="ClerkID" type="xsd:string" />
+    <wsdl:part name="PIN" type="xsd:string" />
+    <wsdl:part name="InvoiceNo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckTerminalResponse">
+    <wsdl:part name="CheckTerminalReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckTBIDResponse">
+    <wsdl:part name="CheckTBIDReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CommTestRequest" />
+  <wsdl:message name="GetMerchantBalanceRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="merchantID" type="xsd:string" />
+    <wsdl:part name="userName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueDeactivateResponse">
+    <wsdl:part name="StoredValueDeactivateReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CardSaleRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckClerkResponse">
+    <wsdl:part name="CheckClerkReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistSaleTicketResponse">
+    <wsdl:part name="PinDistSaleTicketReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListExtRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="transTypeId" type="xsd:string" />
+    <wsdl:part name="carrierId" type="xsd:string" />
+    <wsdl:part name="categoryId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueQueryFeeResponse">
+    <wsdl:part name="StoredValueQueryFeeReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaPortinRTRRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="sim" type="xsd:string" />
+    <wsdl:part name="msisdn" type="xsd:string" />
+    <wsdl:part name="accountNumber" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="zipCode" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="contactEmail" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoice" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PINReturnRequestStatusResponse">
+    <wsdl:part name="PINReturnRequestStatusReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GiftCardQueryFeeRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaPortinPinRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="sim" type="xsd:string" />
+    <wsdl:part name="msisdn" type="xsd:string" />
+    <wsdl:part name="accountNumber" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+    <wsdl:part name="zipCode" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="contactEmail" type="xsd:string" />
+    <wsdl:part name="plan" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoice" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueLoadRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="cardNumber" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaCheckPortInEligibilityRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="siteId" type="xsd:string" />
+    <wsdl:part name="clerkID" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="portinPhoneNumber" type="xsd:string" />
+    <wsdl:part name="portinSIMNumber" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueLoadResponse">
+    <wsdl:part name="StoredValueLoadReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SaleAsyncResponse">
+    <wsdl:part name="SaleAsyncReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LocusActivateGSMsimResponse">
+    <wsdl:part name="LocusActivateGSMsimReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="validateLoginSecurityRequest">
+    <wsdl:part name="rootTag" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="ipAddress" type="xsd:string" />
+    <wsdl:part name="clerkID" type="xsd:string" />
+    <wsdl:part name="strResponse" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListResponse">
+    <wsdl:part name="GetProductListReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketForTransactionRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LocusActivateGSMAfcodeRequest">
+    <wsdl:part name="siteId" type="xsd:string" />
+    <wsdl:part name="pinProductId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="activationProductId" type="xsd:string" />
+    <wsdl:part name="languageId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="afcode" type="xsd:string" />
+    <wsdl:part name="npa" type="xsd:string" />
+    <wsdl:part name="city" type="xsd:string" />
+    <wsdl:part name="zip" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistSaleUSSDRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="phoneNumber" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DoSimActivationGSM1Request">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="producIdSim" type="xsd:string" />
+    <wsdl:part name="amountSim" type="xsd:string" />
+    <wsdl:part name="productIdPin" type="xsd:string" />
+    <wsdl:part name="amountPin" type="xsd:string" />
+    <wsdl:part name="esn" type="xsd:string" />
+    <wsdl:part name="sim" type="xsd:string" />
+    <wsdl:part name="zipCode" type="xsd:string" />
+    <wsdl:part name="netWorkType" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="language" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="DoSimActivationGSM1Response">
+    <wsdl:part name="DoSimActivationGSM1Return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="TransactionConfirmRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="transactionId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PINReturnRequestStatusRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="caseId" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GiftCardBalanceResponse">
+    <wsdl:part name="GiftCardBalanceReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LookUpSimActivationByInvoiceNo1Response">
+    <wsdl:part name="LookUpSimActivationByInvoiceNo1Return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LookUpSimActivationByInvoiceNo1Request">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="StoredValueRefundResponse">
+    <wsdl:part name="StoredValueRefundReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaCancelPortInRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="siteId" type="xsd:string" />
+    <wsdl:part name="clerkID" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+    <wsdl:part name="referenceNumber" type="xsd:string" />
+    <wsdl:part name="portinNumber" type="xsd:string" />
+    <wsdl:part name="emidaTransactionId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="BillPaymentSaleMxResponse">
+    <wsdl:part name="BillPaymentSaleMxReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ApplyPaymentRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="merchantID" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="description" type="xsd:string" />
+    <wsdl:part name="refNumber" type="xsd:string" />
+    <wsdl:part name="userName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistSaleRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LookUpBillPaymentMxByInvocieNoResponse">
+    <wsdl:part name="LookUpBillPaymentMxByInvocieNoReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LookUpTransactionByInvocieNoRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTerminalBalanceRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="userName" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="TransactionsDetailsForDayResponse">
+    <wsdl:part name="TransactionsDetailsForDayReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="postRequestResponse">
+    <wsdl:part name="postRequestReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketForTransactionResponse">
+    <wsdl:part name="GetTicketForTransactionReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaPortInDetailsResponse">
+    <wsdl:part name="LycaPortInDetailsReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchantBalanceResponse">
+    <wsdl:part name="GetMerchantBalanceReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaCancelPortInResponse">
+    <wsdl:part name="LycaCancelPortInReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitPaymentNotificationRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="clerkPassword" type="xsd:string" />
+    <wsdl:part name="documentNumber" type="xsd:string" />
+    <wsdl:part name="documentDate" type="xsd:string" />
+    <wsdl:part name="bankCode" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LocusActivateCDMAesnResponse">
+    <wsdl:part name="LocusActivateCDMAesnReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBProductListRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="Login2Response">
+    <wsdl:part name="Login2Return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProductsProvidersLimitsRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="transTypeId" type="xsd:string" />
+    <wsdl:part name="carrierId" type="xsd:string" />
+    <wsdl:part name="categoryId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBillPaymentBalanceRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PinDistSale_XBorderRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="originCountry" type="xsd:string" />
+    <wsdl:part name="destinationCountry" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GiftCardBalanceRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="cardNumber" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="BillPaymentUserFeeResponse">
+    <wsdl:part name="BillPaymentUserFeeReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ApplyPaymentAgentLevelResponse">
+    <wsdl:part name="ApplyPaymentAgentLevelReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LookupQuippiTransactionByInvoiceNoResponse">
+    <wsdl:part name="LookupQuippiTransactionByInvoiceNoReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPinProductsForActivationResponse">
+    <wsdl:part name="GetPinProductsForActivationReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="setTagNewCreditAfterTransactionRequest">
+    <wsdl:part name="tagNewCreditAfterTransaction" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="QuippiCancelPINRequest">
+    <wsdl:part name="Version" type="xsd:string" />
+    <wsdl:part name="SiteID" type="xsd:string" />
+    <wsdl:part name="ClerkID" type="xsd:string" />
+    <wsdl:part name="ProductID" type="xsd:string" />
+    <wsdl:part name="Amount" type="xsd:string" />
+    <wsdl:part name="PIN" type="xsd:string" />
+    <wsdl:part name="PAN" type="xsd:string" />
+    <wsdl:part name="TransactionID" type="xsd:string" />
+    <wsdl:part name="InvoiceNo" type="xsd:string" />
+    <wsdl:part name="LanguageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CardRefundResponse">
+    <wsdl:part name="CardRefundReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LocusActivateGSMAfcodeResponse">
+    <wsdl:part name="LocusActivateGSMAfcodeReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="BillPaymentRequest">
+    <wsdl:part name="version" type="xsd:string" />
+    <wsdl:part name="terminalId" type="xsd:string" />
+    <wsdl:part name="clerkId" type="xsd:string" />
+    <wsdl:part name="productId" type="xsd:string" />
+    <wsdl:part name="accountId" type="xsd:string" />
+    <wsdl:part name="amount" type="xsd:string" />
+    <wsdl:part name="invoiceNo" type="xsd:string" />
+    <wsdl:part name="languageOption" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ApplyPaymentResponse">
+    <wsdl:part name="ApplyPaymentReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaActivationRTRResponse">
+    <wsdl:part name="LycaActivationRTRReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="NOCOperationResponse">
+    <wsdl:part name="NOCOperationReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="LycaActivationPinResponse">
+    <wsdl:part name="LycaActivationPinReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="webServices">
+    <wsdl:operation name="LookUpBillPaymentMxByInvocieNo" parameterOrder="version terminalId clerkId invoiceNo">
+      <wsdl:input name="LookUpBillPaymentMxByInvocieNoRequest" message="impl:LookUpBillPaymentMxByInvocieNoRequest" />
+      <wsdl:output name="LookUpBillPaymentMxByInvocieNoResponse" message="impl:LookUpBillPaymentMxByInvocieNoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LookUpSimActivationByInvoiceNo1" parameterOrder="version terminalId clerkId invoiceNo">
+      <wsdl:input name="LookUpSimActivationByInvoiceNo1Request" message="impl:LookUpSimActivationByInvoiceNo1Request" />
+      <wsdl:output name="LookUpSimActivationByInvoiceNo1Response" message="impl:LookUpSimActivationByInvoiceNo1Response" />
+    </wsdl:operation>
+    <wsdl:operation name="LookupQuippiTransactionByInvoiceNo" parameterOrder="Version SiteID ClerkID ProductID Amount OriginalInvoiceNo">
+      <wsdl:input name="LookupQuippiTransactionByInvoiceNoRequest" message="impl:LookupQuippiTransactionByInvoiceNoRequest" />
+      <wsdl:output name="LookupQuippiTransactionByInvoiceNoResponse" message="impl:LookupQuippiTransactionByInvoiceNoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions" parameterOrder="version terminalId numberOfTransactions">
+      <wsdl:input name="GetTransactionsRequest" message="impl:GetTransactionsRequest" />
+      <wsdl:output name="GetTransactionsResponse" message="impl:GetTransactionsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTerminal" parameterOrder="version terminalId">
+      <wsdl:input name="CheckTerminalRequest" message="impl:CheckTerminalRequest" />
+      <wsdl:output name="CheckTerminalResponse" message="impl:CheckTerminalResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PinDistSale_XBorder" parameterOrder="version terminalId clerkId productId accountId amount originCountry destinationCountry invoiceNo languageOption">
+      <wsdl:input name="PinDistSale_XBorderRequest" message="impl:PinDistSale_XBorderRequest" />
+      <wsdl:output name="PinDistSale_XBorderResponse" message="impl:PinDistSale_XBorderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PinDistSale_XBorder_01" parameterOrder="version terminalId clerkId productId accountId amount originCountry destinationCountry invoiceNo languageOption transType ipAddress">
+      <wsdl:input name="PinDistSale_XBorder_01Request" message="impl:PinDistSale_XBorder_01Request" />
+      <wsdl:output name="PinDistSale_XBorder_01Response" message="impl:PinDistSale_XBorder_01Response" />
+    </wsdl:operation>
+    <wsdl:operation name="PinDistSaleTicket" parameterOrder="version transactionId terminalId clerkId productId accountId amount invoiceNo languageOption">
+      <wsdl:input name="PinDistSaleTicketRequest" message="impl:PinDistSaleTicketRequest" />
+      <wsdl:output name="PinDistSaleTicketResponse" message="impl:PinDistSaleTicketResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PinDistSaleUSSD" parameterOrder="version phoneNumber clerkId productId accountId amount invoiceNo languageOption">
+      <wsdl:input name="PinDistSaleUSSDRequest" message="impl:PinDistSaleUSSDRequest" />
+      <wsdl:output name="PinDistSaleUSSDResponse" message="impl:PinDistSaleUSSDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PinDistRefund" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+      <wsdl:input name="PinDistRefundRequest" message="impl:PinDistRefundRequest" />
+      <wsdl:output name="PinDistRefundResponse" message="impl:PinDistRefundResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsProvidersLimits" parameterOrder="version terminalId transTypeId carrierId categoryId productId">
+      <wsdl:input name="GetProductsProvidersLimitsRequest" message="impl:GetProductsProvidersLimitsRequest" />
+      <wsdl:output name="GetProductsProvidersLimitsResponse" message="impl:GetProductsProvidersLimitsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductListExt" parameterOrder="version terminalId transTypeId carrierId categoryId productId">
+      <wsdl:input name="GetProductListExtRequest" message="impl:GetProductListExtRequest" />
+      <wsdl:output name="GetProductListExtResponse" message="impl:GetProductListExtResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList" parameterOrder="version terminalId transTypeId carrierId categoryId productId">
+      <wsdl:input name="GetProductListRequest" message="impl:GetProductListRequest" />
+      <wsdl:output name="GetProductListResponse" message="impl:GetProductListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarrierList" parameterOrder="version terminalId transTypeId carrierId categoryId productId">
+      <wsdl:input name="GetCarrierListRequest" message="impl:GetCarrierListRequest" />
+      <wsdl:output name="GetCarrierListResponse" message="impl:GetCarrierListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList" parameterOrder="version terminalId transTypeId carrierId categoryId productId">
+      <wsdl:input name="GetCategoryListRequest" message="impl:GetCategoryListRequest" />
+      <wsdl:output name="GetCategoryListResponse" message="impl:GetCategoryListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransTypeList" parameterOrder="version terminalId transTypeId carrierId categoryId productId">
+      <wsdl:input name="GetTransTypeListRequest" message="impl:GetTransTypeListRequest" />
+      <wsdl:output name="GetTransTypeListResponse" message="impl:GetTransTypeListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="TransactionConfirm" parameterOrder="version terminalId transactionId">
+      <wsdl:input name="TransactionConfirmRequest" message="impl:TransactionConfirmRequest" />
+      <wsdl:output name="TransactionConfirmResponse" message="impl:TransactionConfirmResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="TransactionsDetailsForDay" parameterOrder="version terminalId clerkId dayDate languageOption">
+      <wsdl:input name="TransactionsDetailsForDayRequest" message="impl:TransactionsDetailsForDayRequest" />
+      <wsdl:output name="TransactionsDetailsForDayResponse" message="impl:TransactionsDetailsForDayResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PINReturnRequestStatus" parameterOrder="version terminalId clerkId caseId languageOption">
+      <wsdl:input name="PINReturnRequestStatusRequest" message="impl:PINReturnRequestStatusRequest" />
+      <wsdl:output name="PINReturnRequestStatusResponse" message="impl:PINReturnRequestStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PINReturnRequest" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+      <wsdl:input name="PINReturnRequestRequest" message="impl:PINReturnRequestRequest" />
+      <wsdl:output name="PINReturnRequestResponse" message="impl:PINReturnRequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance" parameterOrder="version terminalId merchantId">
+      <wsdl:input name="GetAccountBalanceRequest" message="impl:GetAccountBalanceRequest" />
+      <wsdl:output name="GetAccountBalanceResponse" message="impl:GetAccountBalanceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitPaymentNotification" parameterOrder="version terminalId amount clerkPassword documentNumber documentDate bankCode">
+      <wsdl:input name="SubmitPaymentNotificationRequest" message="impl:SubmitPaymentNotificationRequest" />
+      <wsdl:output name="SubmitPaymentNotificationResponse" message="impl:SubmitPaymentNotificationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillPaymentBalance" parameterOrder="version terminalId clerkId productId accountId invoiceNo languageOption">
+      <wsdl:input name="GetBillPaymentBalanceRequest" message="impl:GetBillPaymentBalanceRequest" />
+      <wsdl:output name="GetBillPaymentBalanceResponse" message="impl:GetBillPaymentBalanceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GiftCardActivate" parameterOrder="version terminalId clerkId productId serialNumber invoiceNo languageOption">
+      <wsdl:input name="GiftCardActivateRequest" message="impl:GiftCardActivateRequest" />
+      <wsdl:output name="GiftCardActivateResponse" message="impl:GiftCardActivateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GiftCardDeactivate" parameterOrder="version terminalId clerkId productId transactionId invoiceNo languageOption">
+      <wsdl:input name="GiftCardDeactivateRequest" message="impl:GiftCardDeactivateRequest" />
+      <wsdl:output name="GiftCardDeactivateResponse" message="impl:GiftCardDeactivateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GiftCardBalance" parameterOrder="version terminalId clerkId productId cardNumber invoiceNo languageOption">
+      <wsdl:input name="GiftCardBalanceRequest" message="impl:GiftCardBalanceRequest" />
+      <wsdl:output name="GiftCardBalanceResponse" message="impl:GiftCardBalanceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GiftCardQueryFee" parameterOrder="version terminalId clerkId productId invoiceNo languageOption">
+      <wsdl:input name="GiftCardQueryFeeRequest" message="impl:GiftCardQueryFeeRequest" />
+      <wsdl:output name="GiftCardQueryFeeResponse" message="impl:GiftCardQueryFeeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueLoad" parameterOrder="version terminalId clerkId productId cardNumber amount invoiceNo languageOption">
+      <wsdl:input name="StoredValueLoadRequest" message="impl:StoredValueLoadRequest" />
+      <wsdl:output name="StoredValueLoadResponse" message="impl:StoredValueLoadResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueRefund" parameterOrder="version terminalId clerkId productId transactionId invoiceNo languageOption">
+      <wsdl:input name="StoredValueRefundRequest" message="impl:StoredValueRefundRequest" />
+      <wsdl:output name="StoredValueRefundResponse" message="impl:StoredValueRefundResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueBalance" parameterOrder="version terminalId clerkId productId cardNumber invoiceNo languageOption">
+      <wsdl:input name="StoredValueBalanceRequest" message="impl:StoredValueBalanceRequest" />
+      <wsdl:output name="StoredValueBalanceResponse" message="impl:StoredValueBalanceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueActivate" parameterOrder="version terminalId clerkId productId serialNumber amount invoiceNo languageOption">
+      <wsdl:input name="StoredValueActivateRequest" message="impl:StoredValueActivateRequest" />
+      <wsdl:output name="StoredValueActivateResponse" message="impl:StoredValueActivateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueDeactivate" parameterOrder="version terminalId clerkId productId transactionId invoiceNo languageOption">
+      <wsdl:input name="StoredValueDeactivateRequest" message="impl:StoredValueDeactivateRequest" />
+      <wsdl:output name="StoredValueDeactivateResponse" message="impl:StoredValueDeactivateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueQueryFee" parameterOrder="version terminalId clerkId productId operation amount invoiceNo languageOption">
+      <wsdl:input name="StoredValueQueryFeeRequest" message="impl:StoredValueQueryFeeRequest" />
+      <wsdl:output name="StoredValueQueryFeeResponse" message="impl:StoredValueQueryFeeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTransactionByInvoiceNo" parameterOrder="version terminalId clerkId invoiceNo">
+      <wsdl:input name="CheckTransactionByInvoiceNoRequest" message="impl:CheckTransactionByInvoiceNoRequest" />
+      <wsdl:output name="CheckTransactionByInvoiceNoResponse" message="impl:CheckTransactionByInvoiceNoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="checkMerchantPayment" parameterOrder="version merchantID amount refNumber userName password">
+      <wsdl:input name="checkMerchantPaymentRequest" message="impl:checkMerchantPaymentRequest" />
+      <wsdl:output name="checkMerchantPaymentResponse" message="impl:checkMerchantPaymentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LookUpTransactionByInvocieNo" parameterOrder="version terminalId clerkId invoiceNo">
+      <wsdl:input name="LookUpTransactionByInvocieNoRequest" message="impl:LookUpTransactionByInvocieNoRequest" />
+      <wsdl:output name="LookUpTransactionByInvocieNoResponse" message="impl:LookUpTransactionByInvocieNoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBProductList" parameterOrder="version terminalId">
+      <wsdl:input name="GetBProductListRequest" message="impl:GetBProductListRequest" />
+      <wsdl:output name="GetBProductListResponse" message="impl:GetBProductListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckProviderStatus" parameterOrder="version terminalId productId">
+      <wsdl:input name="CheckProviderStatusRequest" message="impl:CheckProviderStatusRequest" />
+      <wsdl:output name="CheckProviderStatusResponse" message="impl:CheckProviderStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendNotification" parameterOrder="version emails messages subject">
+      <wsdl:input name="sendNotificationRequest" message="impl:sendNotificationRequest" />
+      <wsdl:output name="sendNotificationResponse" message="impl:sendNotificationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketForTransaction" parameterOrder="version terminalId clerkId productId amount language">
+      <wsdl:input name="GetTicketForTransactionRequest" message="impl:GetTicketForTransactionRequest" />
+      <wsdl:output name="GetTicketForTransactionResponse" message="impl:GetTicketForTransactionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductFee" parameterOrder="version productId amount">
+      <wsdl:input name="GetProductFeeRequest" message="impl:GetProductFeeRequest" />
+      <wsdl:output name="GetProductFeeResponse" message="impl:GetProductFeeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductUFee" parameterOrder="version productId">
+      <wsdl:input name="GetProductUFeeRequest" message="impl:GetProductUFeeRequest" />
+      <wsdl:output name="GetProductUFeeResponse" message="impl:GetProductUFeeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantBalance" parameterOrder="version merchantID userName password">
+      <wsdl:input name="GetMerchantBalanceRequest" message="impl:GetMerchantBalanceRequest" />
+      <wsdl:output name="GetMerchantBalanceResponse" message="impl:GetMerchantBalanceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalBalance" parameterOrder="version terminalId userName password">
+      <wsdl:input name="GetTerminalBalanceRequest" message="impl:GetTerminalBalanceRequest" />
+      <wsdl:output name="GetTerminalBalanceResponse" message="impl:GetTerminalBalanceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="BillPaymentInfoMx" parameterOrder="version terminalId clerkId productId accountId invoiceNo languageOption">
+      <wsdl:input name="BillPaymentInfoMxRequest" message="impl:BillPaymentInfoMxRequest" />
+      <wsdl:output name="BillPaymentInfoMxResponse" message="impl:BillPaymentInfoMxResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="BillPaymentSaleMx" parameterOrder="version terminalId clerkId productId invoiceNo languageOption fields">
+      <wsdl:input name="BillPaymentSaleMxRequest" message="impl:BillPaymentSaleMxRequest" />
+      <wsdl:output name="BillPaymentSaleMxResponse" message="impl:BillPaymentSaleMxResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSimActivationGSM1" parameterOrder="version terminalId clerkId producIdSim amountSim productIdPin amountPin esn sim zipCode netWorkType invoiceNo language">
+      <wsdl:input name="DoSimActivationGSM1Request" message="impl:DoSimActivationGSM1Request" />
+      <wsdl:output name="DoSimActivationGSM1Response" message="impl:DoSimActivationGSM1Response" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSimActivationCDMA1" parameterOrder="version terminalId clerkId producIdSim amountSim productIdPin amountPin esn zipCode netWorkType invoiceNo language">
+      <wsdl:input name="DoSimActivationCDMA1Request" message="impl:DoSimActivationCDMA1Request" />
+      <wsdl:output name="DoSimActivationCDMA1Response" message="impl:DoSimActivationCDMA1Response" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPaymentISOLevel" parameterOrder="version merchantID amount description refNumber userName password">
+      <wsdl:input name="ApplyPaymentISOLevelRequest" message="impl:ApplyPaymentISOLevelRequest" />
+      <wsdl:output name="ApplyPaymentISOLevelResponse" message="impl:ApplyPaymentISOLevelResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DMCActivation" parameterOrder="version terminalId clerkId producIdSim productIdPin address1 address2 city state zipCode contactNumber corpId dateOfBirth email firstName lastName password securityQuestionId securityQuestionAnswer serviceZipCode passcode sn iccid invoiceNo languageOption carrierId">
+      <wsdl:input name="DMCActivationRequest" message="impl:DMCActivationRequest" />
+      <wsdl:output name="DMCActivationResponse" message="impl:DMCActivationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DMCDeviceCheck" parameterOrder="version terminalId clerkId productId esn carrierId invoiceNo languageOption">
+      <wsdl:input name="DMCDeviceCheckRequest" message="impl:DMCDeviceCheckRequest" />
+      <wsdl:output name="DMCDeviceCheckResponse" message="impl:DMCDeviceCheckResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DMCPortInActivation" parameterOrder="version terminalId clerkId producIdSim productIdPin address1 address2 city state zipCode contactNumber corpId dateOfBirth email firstName lastName password securityQuestionId securityQuestionAnswer serviceZipCode esn mdn passCode sn iccid portAccountNo portBusinessName portCity portFirstName portLastName portMdn portPasswordPin portState portStreetName portStreetNo portZip invoiceNo languageOption carrierId">
+      <wsdl:input name="DMCPortInActivationRequest" message="impl:DMCPortInActivationRequest" />
+      <wsdl:output name="DMCPortInActivationResponse" message="impl:DMCPortInActivationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPinProductsForActivation" parameterOrder="version terminalId clerkId activationProductId invoiceNo languageOption">
+      <wsdl:input name="GetPinProductsForActivationRequest" message="impl:GetPinProductsForActivationRequest" />
+      <wsdl:output name="GetPinProductsForActivationResponse" message="impl:GetPinProductsForActivationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPaymentAgentLevel" parameterOrder="version merchantID amount description refNumber userName password">
+      <wsdl:input name="ApplyPaymentAgentLevelRequest" message="impl:ApplyPaymentAgentLevelRequest" />
+      <wsdl:output name="ApplyPaymentAgentLevelResponse" message="impl:ApplyPaymentAgentLevelResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuippiFxRate" parameterOrder="Version SiteID ClerkID ProductID Amount InvoiceNo">
+      <wsdl:input name="GetQuippiFxRateRequest" message="impl:GetQuippiFxRateRequest" />
+      <wsdl:output name="GetQuippiFxRateResponse" message="impl:GetQuippiFxRateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QuippiCreatePIN" parameterOrder="Version SiteID ClerkID ProductID Amount SenderMobile SendeFirstName SenderLastName RecipientFirstName RecipientLastName ExternalFx InvoiceNo LanguageOption">
+      <wsdl:input name="QuippiCreatePINRequest" message="impl:QuippiCreatePINRequest" />
+      <wsdl:output name="QuippiCreatePINResponse" message="impl:QuippiCreatePINResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QuippiCancelPIN" parameterOrder="Version SiteID ClerkID ProductID Amount PIN PAN TransactionID InvoiceNo LanguageOption">
+      <wsdl:input name="QuippiCancelPINRequest" message="impl:QuippiCancelPINRequest" />
+      <wsdl:output name="QuippiCancelPINResponse" message="impl:QuippiCancelPINResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QuippiAuthorize" parameterOrder="Version SiteID ClerkID PIN InvoiceNo">
+      <wsdl:input name="QuippiAuthorizeRequest" message="impl:QuippiAuthorizeRequest" />
+      <wsdl:output name="QuippiAuthorizeResponse" message="impl:QuippiAuthorizeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LycaPortInDetails" parameterOrder="version siteId clerkID productId languageOption referenceType referenceNumber">
+      <wsdl:input name="LycaPortInDetailsRequest" message="impl:LycaPortInDetailsRequest" />
+      <wsdl:output name="LycaPortInDetailsResponse" message="impl:LycaPortInDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LycaCheckPortInEligibility" parameterOrder="version siteId clerkID productId languageOption portinPhoneNumber portinSIMNumber">
+      <wsdl:input name="LycaCheckPortInEligibilityRequest" message="impl:LycaCheckPortInEligibilityRequest" />
+      <wsdl:output name="LycaCheckPortInEligibilityResponse" message="impl:LycaCheckPortInEligibilityResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LycaCancelPortIn" parameterOrder="version siteId clerkID productId amount languageOption referenceNumber portinNumber emidaTransactionId">
+      <wsdl:input name="LycaCancelPortInRequest" message="impl:LycaCancelPortInRequest" />
+      <wsdl:output name="LycaCancelPortInResponse" message="impl:LycaCancelPortInResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LycaModifyPortIn" parameterOrder="version siteId clerkID productId languageOption referenceNumber portInNumber portInSIMNumber portInAccountNumber portInPasswordPin portInZipCode">
+      <wsdl:input name="LycaModifyPortInRequest" message="impl:LycaModifyPortInRequest" />
+      <wsdl:output name="LycaModifyPortInResponse" message="impl:LycaModifyPortInResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="validateLoginSecurity" parameterOrder="rootTag terminalId version ipAddress clerkID strResponse">
+      <wsdl:input name="validateLoginSecurityRequest" message="impl:validateLoginSecurityRequest" />
+      <wsdl:output name="validateLoginSecurityResponse" message="impl:validateLoginSecurityResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LocusActivateCDMAesn" parameterOrder="siteId pinProductId clerkId activationProductId languageId invoiceNo version esn npa city zip">
+      <wsdl:input name="LocusActivateCDMAesnRequest" message="impl:LocusActivateCDMAesnRequest" />
+      <wsdl:output name="LocusActivateCDMAesnResponse" message="impl:LocusActivateCDMAesnResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LocusActivateCDMAsim" parameterOrder="siteId pinProductId clerkId activationProductId languageId invoiceNo version esn npa sim city zip">
+      <wsdl:input name="LocusActivateCDMAsimRequest" message="impl:LocusActivateCDMAsimRequest" />
+      <wsdl:output name="LocusActivateCDMAsimResponse" message="impl:LocusActivateCDMAsimResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LocusActivateGSMAfcode" parameterOrder="siteId pinProductId clerkId activationProductId languageId invoiceNo version afcode npa city zip">
+      <wsdl:input name="LocusActivateGSMAfcodeRequest" message="impl:LocusActivateGSMAfcodeRequest" />
+      <wsdl:output name="LocusActivateGSMAfcodeResponse" message="impl:LocusActivateGSMAfcodeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LocusActivateGSMsim" parameterOrder="siteId pinProductId clerkId activationProductId languageId invoiceNo version npa sim city zip">
+      <wsdl:input name="LocusActivateGSMsimRequest" message="impl:LocusActivateGSMsimRequest" />
+      <wsdl:output name="LocusActivateGSMsimResponse" message="impl:LocusActivateGSMsimResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LycaPortinPin" parameterOrder="version terminalId clerkId productId sim msisdn accountNumber password zipCode languageOption contactEmail plan amount invoice language">
+      <wsdl:input name="LycaPortinPinRequest" message="impl:LycaPortinPinRequest" />
+      <wsdl:output name="LycaPortinPinResponse" message="impl:LycaPortinPinResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LycaPortinRTR" parameterOrder="version terminalId clerkId productId sim msisdn accountNumber password zipCode languageOption contactEmail amount invoice language">
+      <wsdl:input name="LycaPortinRTRRequest" message="impl:LycaPortinRTRRequest" />
+      <wsdl:output name="LycaPortinRTRResponse" message="impl:LycaPortinRTRResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LycaActivationPin" parameterOrder="version terminalId clerkId productId sim zipCode languageOption contactEmail plan amount invoice language">
+      <wsdl:input name="LycaActivationPinRequest" message="impl:LycaActivationPinRequest" />
+      <wsdl:output name="LycaActivationPinResponse" message="impl:LycaActivationPinResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LycaActivationRTR" parameterOrder="version terminalId clerkId productId sim zipCode languageOption contactEmail amount invoice language">
+      <wsdl:input name="LycaActivationRTRRequest" message="impl:LycaActivationRTRRequest" />
+      <wsdl:output name="LycaActivationRTRResponse" message="impl:LycaActivationRTRResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="BillPaymentUserFee" parameterOrder="version terminalId clerkId productId amount account invoiceNo language">
+      <wsdl:input name="BillPaymentUserFeeRequest" message="impl:BillPaymentUserFeeRequest" />
+      <wsdl:output name="BillPaymentUserFeeResponse" message="impl:BillPaymentUserFeeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckClerk" parameterOrder="version terminalId clerkId">
+      <wsdl:input name="CheckClerkRequest" message="impl:CheckClerkRequest" />
+      <wsdl:output name="CheckClerkResponse" message="impl:CheckClerkResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CommTest">
+      <wsdl:input name="CommTestRequest" message="impl:CommTestRequest" />
+      <wsdl:output name="CommTestResponse" message="impl:CommTestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CardSale" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+      <wsdl:input name="CardSaleRequest" message="impl:CardSaleRequest" />
+      <wsdl:output name="CardSaleResponse" message="impl:CardSaleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CardBalance" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+      <wsdl:input name="CardBalanceRequest" message="impl:CardBalanceRequest" />
+      <wsdl:output name="CardBalanceResponse" message="impl:CardBalanceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CardRefund" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+      <wsdl:input name="CardRefundRequest" message="impl:CardRefundRequest" />
+      <wsdl:output name="CardRefundResponse" message="impl:CardRefundResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PinDistSale" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+      <wsdl:input name="PinDistSaleRequest" message="impl:PinDistSaleRequest" />
+      <wsdl:output name="PinDistSaleResponse" message="impl:PinDistSaleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="postRequest" parameterOrder="request">
+      <wsdl:input name="postRequestRequest" message="impl:postRequestRequest" />
+      <wsdl:output name="postRequestResponse" message="impl:postRequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="TransRefund" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+      <wsdl:input name="TransRefundRequest" message="impl:TransRefundRequest" />
+      <wsdl:output name="TransRefundResponse" message="impl:TransRefundResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="BillPayment" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+      <wsdl:input name="BillPaymentRequest" message="impl:BillPaymentRequest" />
+      <wsdl:output name="BillPaymentResponse" message="impl:BillPaymentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Login" parameterOrder="version userName password languageOption">
+      <wsdl:input name="LoginRequest" message="impl:LoginRequest" />
+      <wsdl:output name="LoginResponse" message="impl:LoginResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout" parameterOrder="version userName password languageOption">
+      <wsdl:input name="LogoutRequest" message="impl:LogoutRequest" />
+      <wsdl:output name="LogoutResponse" message="impl:LogoutResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Login2" parameterOrder="version userName password languageOption">
+      <wsdl:input name="Login2Request" message="impl:Login2Request" />
+      <wsdl:output name="Login2Response" message="impl:Login2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="NOCOperation" parameterOrder="version addressWebService queryString">
+      <wsdl:input name="NOCOperationRequest" message="impl:NOCOperationRequest" />
+      <wsdl:output name="NOCOperationResponse" message="impl:NOCOperationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SaleAsync" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo language regCode">
+      <wsdl:input name="SaleAsyncRequest" message="impl:SaleAsyncRequest" />
+      <wsdl:output name="SaleAsyncResponse" message="impl:SaleAsyncResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTBID" parameterOrder="version terminalId clerkId invoiceNo language">
+      <wsdl:input name="CheckTBIDRequest" message="impl:CheckTBIDRequest" />
+      <wsdl:output name="CheckTBIDResponse" message="impl:CheckTBIDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTrxById" parameterOrder="version terminalId clerkId trxId language">
+      <wsdl:input name="CheckTrxByIdRequest" message="impl:CheckTrxByIdRequest" />
+      <wsdl:output name="CheckTrxByIdResponse" message="impl:CheckTrxByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPayment" parameterOrder="version merchantID amount description refNumber userName password">
+      <wsdl:input name="ApplyPaymentRequest" message="impl:ApplyPaymentRequest" />
+      <wsdl:output name="ApplyPaymentResponse" message="impl:ApplyPaymentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="QuippiRedeem" parameterOrder="Version SiteID ClerkID PIN LocationID PosID PosOperatorID RecipientID InvoiceNo">
+      <wsdl:input name="QuippiRedeemRequest" message="impl:QuippiRedeemRequest" />
+      <wsdl:output name="QuippiRedeemResponse" message="impl:QuippiRedeemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setTagNewCreditAfterTransaction" parameterOrder="tagNewCreditAfterTransaction">
+      <wsdl:input name="setTagNewCreditAfterTransactionRequest" message="impl:setTagNewCreditAfterTransactionRequest" />
+      <wsdl:output name="setTagNewCreditAfterTransactionResponse" message="impl:setTagNewCreditAfterTransactionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTagNewCreditAfterTransaction">
+      <wsdl:input name="getTagNewCreditAfterTransactionRequest" message="impl:getTagNewCreditAfterTransactionRequest" />
+      <wsdl:output name="getTagNewCreditAfterTransactionResponse" message="impl:getTagNewCreditAfterTransactionResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="rpcrouterSoapBinding" type="impl:webServices">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="LookUpBillPaymentMxByInvocieNo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LookUpBillPaymentMxByInvocieNoRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LookUpBillPaymentMxByInvocieNoResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LookUpSimActivationByInvoiceNo1">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LookUpSimActivationByInvoiceNo1Request">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LookUpSimActivationByInvoiceNo1Response">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LookupQuippiTransactionByInvoiceNo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LookupQuippiTransactionByInvoiceNoRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LookupQuippiTransactionByInvoiceNoResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetTransactionsRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetTransactionsResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTerminal">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CheckTerminalRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="CheckTerminalResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PinDistSale_XBorder">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="PinDistSale_XBorderRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="PinDistSale_XBorderResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PinDistSale_XBorder_01">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="PinDistSale_XBorder_01Request">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="PinDistSale_XBorder_01Response">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PinDistSaleTicket">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="PinDistSaleTicketRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="PinDistSaleTicketResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PinDistSaleUSSD">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="PinDistSaleUSSDRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="PinDistSaleUSSDResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PinDistRefund">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="PinDistRefundRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="PinDistRefundResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsProvidersLimits">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetProductsProvidersLimitsRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetProductsProvidersLimitsResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductListExt">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetProductListExtRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetProductListExtResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetProductListRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetProductListResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarrierList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetCarrierListRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetCarrierListResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetCategoryListRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetCategoryListResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransTypeList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetTransTypeListRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetTransTypeListResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionConfirm">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="TransactionConfirmRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="TransactionConfirmResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransactionsDetailsForDay">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="TransactionsDetailsForDayRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="TransactionsDetailsForDayResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PINReturnRequestStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="PINReturnRequestStatusRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="PINReturnRequestStatusResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PINReturnRequest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="PINReturnRequestRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="PINReturnRequestResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetAccountBalanceRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetAccountBalanceResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitPaymentNotification">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="SubmitPaymentNotificationRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="SubmitPaymentNotificationResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillPaymentBalance">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetBillPaymentBalanceRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetBillPaymentBalanceResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GiftCardActivate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GiftCardActivateRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GiftCardActivateResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GiftCardDeactivate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GiftCardDeactivateRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GiftCardDeactivateResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GiftCardBalance">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GiftCardBalanceRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GiftCardBalanceResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GiftCardQueryFee">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GiftCardQueryFeeRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GiftCardQueryFeeResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueLoad">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="StoredValueLoadRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="StoredValueLoadResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueRefund">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="StoredValueRefundRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="StoredValueRefundResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueBalance">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="StoredValueBalanceRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="StoredValueBalanceResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueActivate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="StoredValueActivateRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="StoredValueActivateResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueDeactivate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="StoredValueDeactivateRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="StoredValueDeactivateResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoredValueQueryFee">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="StoredValueQueryFeeRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="StoredValueQueryFeeResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTransactionByInvoiceNo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CheckTransactionByInvoiceNoRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="CheckTransactionByInvoiceNoResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkMerchantPayment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="checkMerchantPaymentRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="checkMerchantPaymentResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LookUpTransactionByInvocieNo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LookUpTransactionByInvocieNoRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LookUpTransactionByInvocieNoResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBProductList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetBProductListRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetBProductListResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckProviderStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CheckProviderStatusRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="CheckProviderStatusResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendNotification">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sendNotificationRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="sendNotificationResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketForTransaction">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetTicketForTransactionRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetTicketForTransactionResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductFee">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetProductFeeRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetProductFeeResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductUFee">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetProductUFeeRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetProductUFeeResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantBalance">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetMerchantBalanceRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetMerchantBalanceResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalBalance">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetTerminalBalanceRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetTerminalBalanceResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BillPaymentInfoMx">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="BillPaymentInfoMxRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="BillPaymentInfoMxResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BillPaymentSaleMx">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="BillPaymentSaleMxRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="BillPaymentSaleMxResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSimActivationGSM1">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="DoSimActivationGSM1Request">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="DoSimActivationGSM1Response">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSimActivationCDMA1">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="DoSimActivationCDMA1Request">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="DoSimActivationCDMA1Response">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPaymentISOLevel">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ApplyPaymentISOLevelRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="ApplyPaymentISOLevelResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DMCActivation">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="DMCActivationRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="DMCActivationResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DMCDeviceCheck">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="DMCDeviceCheckRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="DMCDeviceCheckResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DMCPortInActivation">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="DMCPortInActivationRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="DMCPortInActivationResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinProductsForActivation">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetPinProductsForActivationRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetPinProductsForActivationResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPaymentAgentLevel">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ApplyPaymentAgentLevelRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="ApplyPaymentAgentLevelResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuippiFxRate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetQuippiFxRateRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetQuippiFxRateResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuippiCreatePIN">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="QuippiCreatePINRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="QuippiCreatePINResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuippiCancelPIN">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="QuippiCancelPINRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="QuippiCancelPINResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuippiAuthorize">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="QuippiAuthorizeRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="QuippiAuthorizeResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LycaPortInDetails">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LycaPortInDetailsRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LycaPortInDetailsResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LycaCheckPortInEligibility">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LycaCheckPortInEligibilityRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LycaCheckPortInEligibilityResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LycaCancelPortIn">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LycaCancelPortInRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LycaCancelPortInResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LycaModifyPortIn">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LycaModifyPortInRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LycaModifyPortInResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateLoginSecurity">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="validateLoginSecurityRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="validateLoginSecurityResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocusActivateCDMAesn">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LocusActivateCDMAesnRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LocusActivateCDMAesnResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocusActivateCDMAsim">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LocusActivateCDMAsimRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LocusActivateCDMAsimResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocusActivateGSMAfcode">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LocusActivateGSMAfcodeRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LocusActivateGSMAfcodeResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocusActivateGSMsim">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LocusActivateGSMsimRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LocusActivateGSMsimResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LycaPortinPin">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LycaPortinPinRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LycaPortinPinResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LycaPortinRTR">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LycaPortinRTRRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LycaPortinRTRResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LycaActivationPin">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LycaActivationPinRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LycaActivationPinResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LycaActivationRTR">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LycaActivationRTRRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LycaActivationRTRResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BillPaymentUserFee">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="BillPaymentUserFeeRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="BillPaymentUserFeeResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckClerk">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CheckClerkRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="CheckClerkResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommTest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CommTestRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="CommTestResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CardSale">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CardSaleRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="CardSaleResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CardBalance">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CardBalanceRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="CardBalanceResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CardRefund">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CardRefundRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="CardRefundResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PinDistSale">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="PinDistSaleRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="PinDistSaleResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="postRequest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="postRequestRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="postRequestResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransRefund">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="TransRefundRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="TransRefundResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BillPayment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="BillPaymentRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="BillPaymentResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LoginRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LoginResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="LogoutRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="LogoutResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login2">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="Login2Request">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="Login2Response">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NOCOperation">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="NOCOperationRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="NOCOperationResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaleAsync">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="SaleAsyncRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="SaleAsyncResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTBID">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CheckTBIDRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="CheckTBIDResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTrxById">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CheckTrxByIdRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="CheckTrxByIdResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPayment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ApplyPaymentRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="ApplyPaymentResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuippiRedeem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="QuippiRedeemRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="QuippiRedeemResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setTagNewCreditAfterTransaction">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="setTagNewCreditAfterTransactionRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="setTagNewCreditAfterTransactionResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTagNewCreditAfterTransaction">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTagNewCreditAfterTransactionRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getTagNewCreditAfterTransactionResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:debisys-soap-services" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="webServicesService">
+    <wsdl:port name="rpcrouter" binding="impl:rpcrouterSoapBinding">
+      <wsdlsoap:address location="https://ws.emida.net:444/soap/servlet/rpcrouter" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

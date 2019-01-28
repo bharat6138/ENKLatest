@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ENKService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ENKService_net_emida_ws_webServicesService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws.emida.net:444/soap/servlet/rpcrouter</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

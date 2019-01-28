@@ -1,0 +1,1426 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="ENK.MainMaster" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+  <meta charset="utf-8">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+  <title>
+    <%= ConfigurationManager.AppSettings["COMPANY_NAME"] %>
+  </title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Basic Styles -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css" />
+  <!-- Ezeeway Styles : Please note (Ezeeway-production.css) was created using LESS variables -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/ezeeway-production.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/ezeeway-skins.min.css" />
+  <!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/filterTab.css" />
+  <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css" />
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" href="img/favicon/favicon1.png" type="image/x-icon" />
+  <link rel="icon" href="img/favicon/favicon1.png" type="image/x-icon" />
+  <!-- GOOGLE FONT -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700" />
+  <link rel="apple-touch-icon" href="img/splash/sptouch-icon-iphone.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="img/splash/touch-icon-ipad.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="img/splash/touch-icon-iphone-retina.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="img/splash/touch-icon-ipad-retina.png" />
+  <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <!-- Startup image for web apps -->
+  <link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+  <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+  <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)" />
+  <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/claviska/jquery-alertable/master/jquery.alertable.css' />
+  <style>
+    @media (max-width: 480px) {
+            .new-inerpage #sparks .sparks-info {
+                min-width: 0;
+                padding: 0 5px;
+                width: auto !important;
+                border-left: none;
+            }
+        }
+        @media (max-width: 767px) {
+            .fixed-ribbon #content {
+                padding-top: 108px !important;
+            }
+        }
+        .fixed-navigation nav {
+            overflow-y: hidden !important;
+        }
+        .chosen-container {
+            width: 100% !important;
+        }
+        aside {
+            display: block;
+            background: #3a3633;
+            background: url(data:image/svg+xml; base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…BoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+            background: -moz-linear-gradient(left, #3a3633 93%, #2a2725 100%);
+            background: -webkit-gradient(linear, left top, right top, color-stop(93%, #3a3633), color-stop(100%, #2a2725));
+            background: -webkit-linear-gradient(left, #3a3633 93%, #2a2725 100%);
+            background: -o-linear-gradient(left, #3a3633 93%, #2a2725 100%);
+            background: -ms-linear-gradient(left, #3a3633 93%, #2a2725 100%);
+            background: linear-gradient(to right, #023954 93%, #0a3044 100%) !important;
+            min-height: 100%;
+        }
+        nav ul ul {
+            margin: 0;
+            display: none;
+            background: rgb(13, 48, 66) !important;
+            padding: 7px 0;
+        }
+        #ribbon {
+            background: #023954 !important;
+        }
+        .page-footer {
+            background: #023954 !important;
+        }
+        .jarviswidget-color-blueDark > header {
+            border-color: #c31d15 !important;
+            background: #f03f37 !important;
+            color: #fff;
+        }
+        .fixed-navigation nav > ul {
+            width: 102% !important;
+        }
+        .contct {
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            cursor: default !important;
+            display: inline-block;
+            font-weight: 700;
+            height: 30px;
+            line-height: 24px;
+            min-width: 30px;
+            padding: 2px;
+            text-align: center;
+            text-decoration: none !important;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            background-color: #f8f8f8;
+            background-image: -webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));
+            background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+            background-image: -moz-linear-gradient(top,#f8f8f8,#f1f1f1);
+            background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
+            background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
+            background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+            border: 1px solid #bfbfbf;
+            color: #6D6A69;
+            font-size: 17px;
+            margin: 0px 0 6px 0px;
+        }
+        .ajax-dropdown {
+            position: absolute;
+            display: none;
+            z-index: 905;
+            top: 48px;
+            right: 135px !important;
+            left: 615px !important;
+            width: 344px;
+            height: 462px;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -webkit-box-shadow: 0 2px 4px rgba(30,30,100,.25);
+            -moz-box-shadow: 0 2px 4px rgba(30,30,100,.25);
+            box-shadow: 0 2px 4px rgba(30,30,100,.25);
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #b3b3b3;
+        }
+        .ajax-notifications {
+            height: 412px !important;
+        }
+        .truncate {
+            display: inline-block;
+            width: 250px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+            .truncate + a {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: -1px;
+            }
+
+            .smart-form .row {
+                margin: 0 !important;
+            }
+        @media only screen and (max-width: 479px) and (min-width: 320px) {
+            .fixed-ribbon #content {
+                padding-top: 14px;
+            }
+            .display-image{
+                width: 80px !important;
+                padding-top: 8px;
+                padding-left: 5px;
+             }
+            .switch-field {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #lblAccounttext{
+                font-size:12px !important;
+            }
+            #lblBalance{
+                font-size:12px !important;
+            }
+            .allBtn{
+                        display: flex;
+            justify-content: center;
+            align-items: center;
+                    }
+            .fixed-ribbon #ribbon {
+                    left: 0;
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 100vw;
+                    padding: 0px 13px;
+                }
+            .btn-group-xs>.btn, .btn-xs {
+                    padding: 1px 5px;
+                    font-size: 10px;
+                    line-height: 1.5;
+                    border-radius: 2px;
+                }
+            .switch-field label:first-of-type {
+                border-radius: 4px 0 0 4px;
+                margin-left: 19%;
+            }
+            .contct1{
+                display:none;
+            }
+            .contct {
+                    -moz-border-radius: 2px;
+                    -webkit-border-radius: 2px;
+                    border-radius: 2px;
+                    cursor: default !important;
+                    display: inline-block;
+                    font-weight: 700;
+                    height: 18px;
+                    margin-left: 5px;
+                    line-height: 16px;
+                    min-width: 20px;
+                    padding: 0px;
+                }
+            .ribbon-button-alignment{
+                position: relative;
+            }
+            .mobileM {
+                top: -48px;
+                position: relative;
+            }
+            .mobileL {
+                top: -48px;
+                position: relative;
+                left: 8px;
+            }
+            #lblAccounttext {
+                color: white;
+            }
+            .hiddenM {
+                display: none;
+            }
+            .dropdown-menu {
+                position: absolute;
+                top: 100%;
+                left: 1px !important;
+                z-index: 1000;
+                display: none;
+                /* float: left; */
+                width: 100vw;
+                overflow-x: scroll;
+                padding: 4px 0;
+                margin: 1px 0 0;
+                list-style: none;
+                font-size: 10px;
+                text-align: left;
+            }
+                .dropdown-menu > li > a {
+                    display: block;
+                    padding: 3px 8px;
+                    clear: both;
+                    font-weight: 400;
+                    line-height: 1.42857143;
+                    color: #333;
+                    white-space: nowrap;
+                }
+            .ajax-dropdown {
+                position: absolute;
+                display: none;
+                z-index: 905;
+                width: 100vw;
+                top: 48px;
+                right: 135px !important;
+                left: 0 !important;
+            }
+        }
+        ol, ul {
+            margin-top: 9px !important;
+            margin-bottom: 9px;
+        }
+        .page-title {
+            margin: 10px 0;
+        }
+        .sparks-info {
+            list-style: none;
+        }
+    </style>
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+
+<body class="desktop-detected fixed-header fixed-page-footer fixed-navigation fixed-ribbon pace-done">
+  <%-- <body class="desktop-detected pace-done smart-style-5">--%>
+  <!-- possible classes: minified, fixed-ribbon, fixed-header, fixed-width-->
+  <form id="form1" runat="server">
+    <div id="main" style="padding: 0 0 0px!important; min-height: 0px!important;" role="main">
+      <div id="ribbon">
+          <div class="allBtn">
+        <a href="ActivatePreloadedSim.aspx" id="A1" runat="server" class="btn btn-xs btn-primary  " style="float: left !important; margin-top: 11px;">Activate Preloaded SIM</a>
+        <a href="Topup.aspx" id="A2" runat="server" class="btn btn-xs btn-primary  " style="float: left !important; margin-top: 11px; margin-left: 11px;">Add Funds</a>
+        <a href="GlobalRecharge.aspx" id="A3" runat="server" class="btn btn-xs btn-primary" visible="false" style="float: left !important; margin-top: 11px; margin-left: 11px;">Global Recharge</a>
+              </div>
+      
+          <div class="allBtn">
+                  <span class="ribbon-button-alignment pull-right">
+
+                  <span class="goli">
+                <asp:Label ID="lblAccounttext" Style="color: white !important" Font-Bold="true" Font-Size="14px" runat="server" Text="Account Balance"></asp:Label>
+                &nbsp;
+                <asp:Label ID="lblBalance" Font-Bold="true" Font-Size="16px" Style="color: tomato" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lblBalance1" Font-Bold="true" Font-Size="12px" runat="server" Text="&nbsp;"></asp:Label>
+              </span>
+         
+          <span id="activity" class="activity-dropdown"><i class="fa fa-bell" style="color: white;"></i><b class="badge">
+              <asp:Label ID="lblcount" runat="server" Text="0"></asp:Label>
+            </b>
+          </span>
+          <!-- AJAX-DROPDOWN : control this dropdown height, look and feel from the LESS variable file -->
+          <div class="ajax-dropdown">
+            <!-- notification content -->
+            <div class="ajax-notifications custom-scroll">
+              <ul class="notification-body">
+                <asp:Repeater runat="server" ID="rpt" OnItemCommand="rpt_ItemCommand">
+                  <ItemTemplate>
+                    <li>
+                      <span class="padding-10 unread">
+                        <em class="badge padding-5 no-border-radius bg-color-blueLight pull-left margin-right-5">
+                          <i class="fa fa-user fa-fw fa-2x"></i>
+                        </em>
+                        <span>
+                          <a href="NotificationMaster.aspx?MsgID=<%# Eval(" ID") %>">
+                            <span class="text-primary">
+                              <asp:Label runat="server" ID="lblnot" class="truncate" Text='<%# Eval("NotificationText") %>'></asp:Label>
+                            </span>
+                            <asp:LinkButton ID="lnkDismiss" runat="server" CommandName="Dismiss" CommandArgument='<%# Eval("ID") %>' Style="float: right; bottom: 31px; right: -11px;"><i class="btn btn-danger btn-xs fa fa-close"></i> </asp:LinkButton>
+                            <br>
+                            <span class="pull-right font-xs text-muted"><i>
+                                <asp:Label runat="server" ID="lbldate" Text='<%# Eval("CreatedDtTM") %>'></asp:Label>
+                              </i></span>
+                          </a>
+                        </span>
+                      </span>
+                    </li>
+                  </ItemTemplate>
+                </asp:Repeater>
+              </ul>
+            </div>
+            <span>
+              <a href="NotificationMaster.aspx">
+                <button type="button" class="btn col-md-12 btn-xs btn-default pull-right">
+                  More <i class="fa fa-refresh"></i>
+                </button>
+              </a>
+            </span>
+            <!-- end notification content -->
+            <!-- footer: refresh area -->
+            <!-- end footer -->
+          </div>
+          <!-- END AJAX-DROPDOWN -->
+      
+    
+     
+    
+      <span class="project-selector dropdown-toggle" data-toggle="dropdown"><small style="color: white;" class="contct1"> &nbsp; Contact Us </small><i class="fa fa-phone contct"></i></span>
+      <!-- Suggestion: populate this list with fetch and push technique -->
+      <ul class="dropdown-menu">
+        <li>
+          <a href="javascript:void(0);"><strong>Customer service business hours -</strong> (Mon - Fri 9 AM - 8 PM) (SAT 10 AM - 6 PM) (SUN 10 AM - 3 PM)</a>
+        </li>
+        <li>
+          <a href="javascript:void(0);"><strong>Call Customer service -</strong>
+            <asp:Label ID="Label4" runat="server" Text=" +1 (213) 213 5880"></asp:Label>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);"><strong>Email us -</strong>
+            <asp:Label ID="Label5" runat="server" Text="">
+              <%= ConfigurationManager.AppSettings["COMPANY_EMAIL"] %>
+            </asp:Label>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);"><strong>Sales Representative -</strong>
+            <asp:Label ID="Label6" runat="server" Text=""></asp:Label>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);"><strong>Call Sales Representative -</strong>
+            <asp:Label ID="Label7" runat="server" Text=""></asp:Label>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);"><strong>Email sales representative -</strong>
+            <asp:Label ID="Label8" runat="server" Text=""></asp:Label>
+          </a>
+        </li>
+      </ul>
+      </span>
+     <</div>
+    </div>
+    </div>
+    <!-- HEADER -->
+    <header id="header">
+   
+      <div id="logo-group">
+        <img src="img/logologin.png" class="pull-left display-image" alt="" style="width: 100px; margin-top: 6px; max-height: 100px!important;">
+      </div>
+      <!-- projects dropdown -->
+      <div class="project-context hidden-xs">
+       
+      </div>
+      <!-- end projects dropdown -->
+      <div class="pull-right  mobileM">
+        <!-- collapse menu button -->
+        <div id="hide-menu" class="btn-header pull-right">
+          <span>
+            <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i class="fa fa-reorder"></i></a>
+          </span>
+        </div>
+        <!-- end collapse menu -->
+        <!-- #MOBILE -->
+        <!-- Top menu profile link : this shows only when top menu is active -->
+        <ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
+          <li class="">
+            <a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown">
+              <img src="img/avatars/sunny.png" alt="John Doe" class="online" />
+            </a>
+            <ul class="dropdown-menu pull-right">
+              <li>
+                <a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0"><i class="fa fa-cog"></i>Setting</a> </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#" class="padding-10 padding-top-0 padding-bottom-0"><i class="fa fa-user"></i><u>P</u>rofile</a> </li>
+              <li class="divider"></li>
+              <li>
+                <a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0" data-action="toggleShortcut"><i class="fa fa-arrow-down"></i><u>S</u>hortcut</a> </li>
+              <li class="divider"></li>
+              <li>
+                <a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0" data-action="launchFullscreen"><i class="fa fa-arrows-alt"></i>Full <u>S</u>creen</a> </li>
+              <li class="divider"></li>
+              <li>
+                <a href="Login.aspx" class="padding-10 padding-top-5 padding-bottom-5" data-action="userLogout"><i class="fa fa-sign-out fa-lg"></i><strong><u>L</u>ogout</strong></a> </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- logout button -->
+        <div id="logout" class="btn-header transparent pull-right">
+          <span>
+            <small>Logout</small>
+            <%-- <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" title="Sign Out" data-logout-msg="You can improve your security further after logging out by closing this opened browser"><i class="fa fa-sign-out"></i></asp:LinkButton>--%>
+            <a href="LogOut.aspx" title="Sign Out" data-action="userLogout" data-logout-msg="You can improve your security further after logging out by closing this opened browser"><i class="fa fa-sign-out"></i></a>
+          </span>
+        </div>
+        <!-- end logout button -->
+        <!-- search mobile button (this is hidden till mobile view port) -->
+       
+        <!-- fullscreen button -->
+        <div id="fullscreen" class="btn-header transparent pull-right">
+         <%-- <span>
+            <small class="hiddenM">Maxamize</small>
+            <a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen">
+              <i class="fa fa-arrows-alt"></i>
+            </a>
+          </span>--%>
+          <img src="img/LycaMobile.png" class="pull-left display-image" alt="" style="width: 120px; margin-top: 6px; max-height: 100px!important;" hspace="20">
+          <%--  <span>
+                         Max Screen
+					</span>--%>
+        </div>
+        <!-- end fullscreen button -->
+       
+        <!-- end voice command -->
+      </div>
+    </header>
+    <!-- RIBBON -->
+    <!-- END RIBBON -->
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- end pulled right: nav area -->
+    <!-- END HEADER -->
+    <aside id="left-panel">
+      <!-- User info -->
+      <div class="login-info">
+        <span class="dropdown">
+          <!-- User image size is adjusted inside CSS, it should stay as it -->
+          <a href="javascript:void(0);" data-target="#" data-toggle="dropdown">
+            <%--<img src="img/avatars/4.png" alt="me" class="online" /> --%>
+            <span>
+              <asp:Label ID="lblUserName" runat="server" Text=""></asp:Label>
+            </span> <i class="fa fa-angle-down"></i></a>
+         
+        </span>
+      </div>
+      <!-- end user info -->
+    
+      <nav>
+    
+        <ul class="custom-scroll">
+          <li id="menuDashBoard" runat="server">
+            <a href="Dashboard.aspx" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i><span class="menu-item-parent">Dashboard</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-lg fa-fw fa-user"></i><span class="menu-item-parent">Admin</span></a>
+            <ul>
+              <li id="menu89" runat="server">
+                <a href="TariffGroup.aspx">Plan Group</a>
+              </li>
+              <li id="menu1" runat="server">
+                <a href="DistributorView.aspx">Seller</a>
+              </li>
+              <li id="menu13" runat="server">
+                <a href="VendorView.aspx">Network</a>
+              </li>
+              <li id="menu3" runat="server">
+                <a href="Createplans.aspx">Create Plans</a>
+              </li>
+              <li id="menu24" runat="server">
+                <a href="Createplans.aspx">Plans List</a>
+              </li>
+              <li id="menu2" runat="server">
+                <a href="Topup.aspx">Add Funds</a>
+              </li>
+              <li id="menu6" runat="server">
+                <a href="UserList.aspx">Create User</a>
+              </li>
+              <li id="menu7" runat="server">
+                <a href="RoleList.aspx">Role</a>
+              </li>
+              <li id="DistributorPlanMappingChange" runat="server">
+                <a href="DistributorPlanMappingChange.aspx">Distributor Plan Mapping</a>
+              </li>
+              <li id="mnuDistributorBulkRecharge" runat="server">
+                <a href="RechargeBulk.aspx">Distributor Bulk % Recharge</a>
+              </li>
+              <li id="NetworkReplace" runat="server">
+                <a href="NetworkReplace.aspx">Change Network</a>
+              </li>
+              <%--change by akash for bind images from database starts--%>
+              <li id="divbanner" runat="server">
+                <a href="#"><span class="menu-item-parent">Banner</span></a>
+                <ul>
+                  <li id="ExternalLink" runat="server">
+                    <a href="Banner.aspx?ImgFlag=1">External Banner</a>
+                  </li>
+                  <li id="InternalLink" runat="server">
+                    <a href="Banner.aspx?ImgFlag=2">Internal Banner</a>
+                  </li>
+                </ul>
+              </li>
+              <%--change by akash for bind images from database ends--%>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-lg fa-fw fa-money"></i><span class="menu-item-parent">Inventory</span></a>
+            <ul>
+              <li id="menu4" runat="server">
+                <a href="Purchase.aspx">Purchase</a>
+              </li>
+              <li id="menu5" runat="server">
+                <a href="InventoryTransfer.aspx">Transfer</a>
+              </li>
+              <li id="menu25" runat="server">
+                <a href="InventoryAccept.aspx">Accept</a>
+              </li>
+              <li id="menuIccidMsisdnSearch" runat="server">
+                <a href="IccidMsisdnSearch.aspx">ICCID/MSISDN Search</a>
+              </li>
+              <li id="mnuStockTransferReport" runat="server">
+                <a href="StockTransferReport.aspx">Stock Transfer Report</a>
+              </li>
+              <li id="menuSIMTariff" runat="server">
+                <a href="SimTariffMapping.aspx">Sim Plan Mapping</a>
+              </li>
+            </ul>
+          </li>
+          <li id="menuSettings" runat="server">
+            <a href="#"><i class="fa fa-lg fa-fw fa-wrench"></i><span class="menu-item-parent">Settings</span></a>
+            <ul>
+              <li id="menu14" runat="server">
+                <a href="CurrencyView.aspx">Currency</a>
+              </li>
+              <li id="menu15" runat="server">
+                <a href="Resetpassword.aspx">Reset Password</a>
+              </li>
+            </ul>
+          </li>
+          <li id="Li4" runat="server">
+            <a href="NotesReport.aspx" title="Distributor Notes"><i class="fa fa-lg fa-fw fa-file-text"></i><span class="menu-item-parent">Notes</span></a>
+            <%--<a <asp:LinkButton ID="linkSim" runat="server" OnClick="linkSim_Click">Activate Sim</asp:LinkButton></a>--%>
+            <%--<a href="Reacharge.aspx">Recharge</a> --%>
+          </li>
+          <li id="menu8" runat="server">
+            <a href="ActivationSim.aspx" title="Activate Sim"><i class="fa fa-lg fa-fw fa-mobile"></i><span class="menu-item-parent">Activate Sim</span></a>
+            <%--<a <asp:LinkButton ID="linkSim" runat="server" OnClick="linkSim_Click">Activate Sim</asp:LinkButton></a>--%>
+            <%--<a href="ActivationSim.aspx">Activate Sim</a> --%>
+          </li>
+          <li id="menu9" runat="server">
+            <a href="ActivationPortin.aspx" title="PortIn"><i class="fa fa-lg fa-fw fa-mobile"></i><span class="menu-item-parent">Check PortIn Status</span></a>
+            <%-- <a <asp:LinkButton ID="linkPortin" runat="server" OnClick="linkPortin_Click">PortIn</asp:LinkButton></a>--%>
+            <%--<a href="ActivationPortin.aspx">PortIn</a> --%>
+          </li>
+          <li id="Li3" runat="server">
+            <%--Reacharge.aspx--%>
+            <a href="LycaRecharge.aspx" title="Recharge"><i class="fa fa-lg fa-fw fa-mobile"></i><span class="menu-item-parent">Recharge</span></a>
+            <%--<a <asp:LinkButton ID="linkSim" runat="server" OnClick="linkSim_Click">Activate Sim</asp:LinkButton></a>--%>
+            <%--<a href="Reacharge.aspx">Recharge</a> --%>
+          </li>
+          <li id="Li8" runat="server" visible="true">
+            <%--Reacharge.aspx--%>
+            <a href="H2ORecharge.aspx" title="H2ORecharge"><i class="fa fa-lg fa-fw fa-mobile"></i><span class="menu-item-parent">H2O Recharge</span></a>
+          </li>
+          <li id="menu10" runat="server">
+            <%--SimReplacement.aspx--%>
+            <%--<a href="#" onclick="basicPopup();return false;" title="Sim Replacement"><i class="fa fa-lg fa-fw fa-mobile"></i><span class="menu-item-parent">Sim Swap</span></a>--%>
+            <a href="SimSwap.aspx" title="Sim Replacement"><i class="fa fa-lg fa-fw fa-mobile"></i><span class="menu-item-parent">Sim Swap</span></a>
+            <%--<a href="SimReplacement.aspx">Sim Replacement</a> --%>
+          </li>
+          <li id="Li7" runat="server">
+            <a href="ViewPlanDetails.aspx"><i class="fa fa-lg fa-fw fa-file-text"></i><span class="menu-item-parent">View Plan Details</span></a>
+          </li>
+          <li id="menu12" runat="server">
+            <a href="ActivationLegderReport.aspx"><i class="fa fa-lg fa-fw fa-sort-alpha-asc"></i><span class="menu-item-parent">Account Report</span></a>
+          </li>
+          <li id="menuShopOnline" runat="server">
+            <a href="http://www.a2zbucket.com" target="_blank"><i class="fa fa-lg fa-fw fa-mobile"></i><span class="menu-item-parent">Shop Online</span></a>
+          </li>
+          <li id="menuNotification" runat="server">
+            <a href="ViewNotificationList.aspx"><i class="fa fa-lg fa-fw fa-user"></i><span class="menu-item-parent">Notification</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-lg fa-fw fa-file-text"></i><span class="menu-item-parent">Reports</span></a>
+            <ul>
+              <li id="menu16" runat="server">
+                <a href="ActivationSIMReport.aspx">SIM Activation Report</a>
+              </li>
+              <li id="ActivationFailedReport" runat="server" visible="false">
+                <a href="ActivationFailedReport.aspx">SIM Activation Failed Report</a>
+              </li>
+              <li id="menu32" runat="server" visible="false">
+                <a href="RechargeRequestReport.aspx">Request Recharge Report</a>
+              </li>
+              <li id="menu31" runat="server">
+                <a href="RechargeSimReport.aspx">Recharge Report</a>
+              </li>
+              <li id="RechargeFailReport" runat="server" visible="false">
+                <a href="RechargeFailReport.aspx">Recharge Failed Report</a>
+              </li>
+              <li id="menu17" runat="server" visible="false">
+                <a href="SalesReportForActivationAndPortIn.aspx">Sales Report</a>
+              </li>
+              <li id="menu21" runat="server" visible="false">
+                <a href="SalesReport.aspx">Direct Sales Report</a>
+              </li>
+              <li id="menu18" runat="server">
+                <a href="InventoryStatusReport.aspx">Inventory Status Report</a>
+              </li>
+              <%-- <li id="menu19" runat="server">
+								<a href="InventoryPurchaseReport.aspx">Inventory Purchase Report</a> 
+							</li>--%>
+              <li id="menu19" runat="server">
+                <a href="PurchaseReport.aspx">Inventory Purchase Report</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-lg fa-fw fa-file-text"></i><span class="menu-item-parent">Ledger Reports</span></a>
+                <ul>
+                  <li id="mnuLedgerReport" runat="server">
+                    <a href="LedgerReport.aspx">Ledger Report</a>
+                  </li>
+                  <li id="mnuTopupLedger" runat="server" visible="false">
+                    <a href="TopupLedger.aspx">Topup Ledger Report</a>
+                  </li>
+                  <li id="menu30" runat="server">
+                    <a href="TopupReport.aspx">Topup Report</a>
+                  </li>
+                  <li id="mnuDeductReport" runat="server">
+                    <a href="DeductReport.aspx">Deduction Report</a>
+                  </li>
+                  <li id="menu23" runat="server">
+                    <a href="PaymentDetail.aspx">Topup Detail</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-lg fa-fw fa-file-text"></i><span class="menu-item-parent">Other Reports</span></a>
+                <ul>
+                  <li id="menu20" runat="server">
+                    <a href="SimHistoryReport.aspx">Sim History Report</a>
+                  </li>
+                  <li id="menuExcelImport" runat="server">
+                    <a href="ExcelImport.aspx">Bundle Renewal with Distributor Report</a>
+                  </li>
+                  <li id="mnuLoginHistory" runat="server">
+                    <a href="LoginHistory.aspx">Login History Report</a>
+                  </li>
+                  <li id="menu22" runat="server">
+                    <a href="SuscriberLog.aspx">Suscriber Log</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li id="Li5" runat="server">
+            <a href="http://www.lycamobile.us/rates " target="_blank" title="PortIn"><i class="fa fa-lg fa-fw fa-file-text"></i><span class="menu-item-parent">Check Intl Rates</span></a>
+          </li>
+          <li id="Li6" runat="server">
+            <a href="https://www.lycamobile.us/en/coverage-map" target="_blank" title="PortIn"><i class="fa fa-lg fa-fw fa-file-text"></i><span class="menu-item-parent">Check Coverage</span></a>
+          </li>
+          <li>
+            <a href="#" id="menu11" runat="server"><i class="fa fa-lg fa-fw fa-file-text"></i><span class="menu-item-parent">Cancel Recharges</span></a>
+            <ul>
+              <li>
+                <a href="RechargeActivationCancellation.aspx" title="Cancel"><span class="menu-item-parent">Cancellation</span></a>
+              </li>
+              <li id="CR" runat="server" visible="true">
+                <a href="RechargeActivationCancelReport.aspx" title="Cancel"><span class="menu-item-parent">Cancel Report</span></a>
+              </li>
+            </ul>
+          </li>
+          <li id="Li1" runat="server" visible="false">
+            <a href="SubscriberSim.aspx"><i class="fa fa-lg fa-fw fa-sort-alpha-asc"></i><span class="menu-item-parent">Subscriber SIM</span></a>
+          </li>
+          <li id="Li2" runat="server" visible="false">
+            <a href="SubscriberPortin.aspx"><i class="fa fa-lg fa-fw fa-sort-alpha-asc"></i><span class="menu-item-parent">Subscriber PORTIN</span></a>
+          </li>
+        </ul>
+      </nav>
+      <span class="minifyme" data-action="minifyMenu">
+        <i class="fa fa-arrow-circle-left hit"></i></span>
+    </aside>
+    <div class="page-footer">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <span class="txt-color-white">© Virtuzo Infosystems Pvt. Ltd.</span>
+        </div>
+        
+      </div>
+    </div>
+    <!-- END PAGE FOOTER -->
+    <div id="shortcut">
+      <ul>
+        <li>
+          <a href="#calendar.html" class="jarvismetro-tile big-cubes bg-color-orangeDark"><span class="iconbox"><i class="fa fa-calendar fa-4x"></i><span>Calendar</span> </span></a></li>
+        <li>
+          <a href="#gmap-xml.html" class="jarvismetro-tile big-cubes bg-color-purple"><span class="iconbox"><i class="fa fa-map-marker fa-4x"></i><span>Maps</span> </span></a></li>
+        <li>
+          <a href="#invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"><span class="iconbox"><i class="fa fa-book fa-4x"></i><span>Invoice <span class="label pull-right bg-color-darken">99</span></span> </span></a></li>
+        <li>
+          <a href="#gallery.html" class="jarvismetro-tile big-cubes bg-color-greenLight"><span class="iconbox"><i class="fa fa-picture-o fa-4x"></i><span>Gallery </span></span></a></li>
+        <li>
+          <a href="javascript:void(0);" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"><span class="iconbox"><i class="fa fa-user fa-4x"></i><span>My Profile </span></span></a></li>
+      </ul>
+    </div>
+    <!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+    <script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script>
+      if (!window.jQuery) {
+        document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+      }
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+      if (!window.jQuery.ui) {
+        document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+      }
+    </script>
+    <!-- IMPORTANT: APP CONFIG -->
+    <script src="js/app.config.js"></script>
+    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+    <script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- CUSTOM NOTIFICATION -->
+    <script src="js/notification/SmartNotification.min.js"></script>
+    <!-- JARVIS WIDGETS -->
+    <script src="js/smartwidgets/jarvis.widget.min.js"></script>
+    <!-- EASY PIE CHARTS -->
+    <script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+    <!-- SPARKLINES -->
+    <script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+    <!-- JQUERY VALIDATE -->
+    <script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+    <!-- JQUERY MASKED INPUT -->
+    <script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+    <!-- JQUERY SELECT2 INPUT -->
+    <script src="js/plugin/select2/select2.min.js"></script>
+    <!-- JQUERY UI + Bootstrap Slider -->
+    <script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <!-- browser msie issue fix -->
+    <script src="js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+    <!-- FastClick: For mobile devices -->
+    <script src="js/plugin/fastclick/fastclick.min.js"></script>
+    <!--[if IE 8]>
+		<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+		<![endif]-->
+    <!-- Demo purpose only -->
+    <script src="js/demo.min.js"></script>
+    <!-- MAIN APP JS FILE -->
+    <script src="js/app.min.js"></script>
+    <!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
+    <!-- Voice command : plugin -->
+    <script src="js/speech/voicecommand.min.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/main.js"></script> <!-- Resource jQuery -->
+    <!-- PAGE RELATED PLUGIN(S) -->
+    <!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip -->
+    <script src="js/plugin/flot/jquery.flot.cust.min.js"></script>
+    <script src="js/plugin/flot/jquery.flot.resize.min.js"></script>
+    <script src="js/plugin/flot/jquery.flot.tooltip.min.js"></script>
+    <!-- Vector Maps Plugin: Vectormap engine, Vectormap language -->
+    <script src="js/plugin/vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="js/plugin/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- Full Calendar -->
+    <script src="js/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js'></script>
+    <script src='https://rawgit.com/claviska/jquery-alertable/master/jquery.alertable.min.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // DO NOT REMOVE : GLOBAL FUNCTIONS!
+        pageSetUp();
+        /*
+         * PAGE RELATED SCRIPTS
+         */
+        $(".js-status-update a").click(function() {
+          var selText = $(this).text();
+          var $this = $(this);
+          $this.parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+          $this.parents('.dropdown-menu').find('li').removeClass('active');
+          $this.parent().addClass('active');
+        });
+        /*
+         * TODO: add a way to add more todo's to list
+         */
+        // initialize sortable
+        $(function() {
+          $("#sortable1, #sortable2").sortable({
+            handle: '.handle',
+            connectWith: ".todo",
+            update: countTasks
+          }).disableSelection();
+        });
+        // check and uncheck
+        $('.todo .checkbox > input[type="checkbox"]').click(function() {
+          var $this = $(this).parent().parent().parent();
+          if ($(this).prop('checked')) {
+            $this.addClass("complete");
+            // remove this if you want to undo a check list once checked
+            //$(this).attr("disabled", true);
+            $(this).parent().hide();
+            // once clicked - add class, copy to memory then remove and add to sortable3
+            $this.slideUp(500, function() {
+              $this.clone().prependTo("#sortable3").effect("highlight", {}, 800);
+              $this.remove();
+              countTasks();
+            });
+          } else {
+            // insert undo code here...
+          }
+        })
+        // count tasks
+        function countTasks() {
+          $('.todo-group-title').each(function() {
+            var $this = $(this);
+            $this.find(".num-of-tasks").text($this.next().find("li").size());
+          });
+        }
+        /*
+         * RUN PAGE GRAPHS
+         */
+        /* TAB 1: UPDATING CHART */
+        // For the demo we use generated data, but normally it would be coming from the server
+        var data = [],
+          totalPoints = 200,
+          $UpdatingChartColors = $("#updating-chart").css('color');
+
+        function getRandomData() {
+          if (data.length > 0)
+            data = data.slice(1);
+          // do a random walk
+          while (data.length < totalPoints) {
+            var prev = data.length > 0 ? data[data.length - 1] : 50;
+            var y = prev + Math.random() * 10 - 5;
+            if (y < 0)
+              y = 0;
+            if (y > 100)
+              y = 100;
+            data.push(y);
+          }
+          // zip the generated y values with the x values
+          var res = [];
+          for (var i = 0; i < data.length; ++i)
+            res.push([i, data[i]])
+          return res;
+        }
+        // setup control widget
+        var updateInterval = 1500;
+        $("#updating-chart").val(updateInterval).change(function() {
+          var v = $(this).val();
+          if (v && !isNaN(+v)) {
+            updateInterval = +v;
+            $(this).val("" + updateInterval);
+          }
+        });
+        // setup plot
+        var options = {
+          yaxis: {
+            min: 0,
+            max: 100
+          },
+          xaxis: {
+            min: 0,
+            max: 100
+          },
+          colors: [$UpdatingChartColors],
+          series: {
+            lines: {
+              lineWidth: 1,
+              fill: true,
+              fillColor: {
+                colors: [{
+                  opacity: 0.4
+                }, {
+                  opacity: 0
+                }]
+              },
+              steps: false
+            }
+          }
+        };
+        var plot = $.plot($("#updating-chart"), [getRandomData()], options);
+        /* live switch */
+        $('input[type="checkbox"]#start_interval').click(function() {
+          if ($(this).prop('checked')) {
+            $on = true;
+            updateInterval = 1500;
+            update();
+          } else {
+            clearInterval(updateInterval);
+            $on = false;
+          }
+        });
+
+        function update() {
+          if ($on == true) {
+            plot.setData([getRandomData()]);
+            plot.draw();
+            setTimeout(update, updateInterval);
+          } else {
+            clearInterval(updateInterval)
+          }
+        }
+        var $on = false;
+        /*end updating chart*/
+        /* TAB 2: Social Network  */
+        $(function() {
+          // jQuery Flot Chart
+          var twitter = [
+              [1, 27],
+              [2, 34],
+              [3, 51],
+              [4, 48],
+              [5, 55],
+              [6, 65],
+              [7, 61],
+              [8, 70],
+              [9, 65],
+              [10, 75],
+              [11, 57],
+              [12, 59],
+              [13, 62]
+            ],
+            facebook = [
+              [1, 25],
+              [2, 31],
+              [3, 45],
+              [4, 37],
+              [5, 38],
+              [6, 40],
+              [7, 47],
+              [8, 55],
+              [9, 43],
+              [10, 50],
+              [11, 47],
+              [12, 39],
+              [13, 47]
+            ],
+            data = [{
+              label: "Twitter",
+              data: twitter,
+              lines: {
+                show: true,
+                lineWidth: 1,
+                fill: true,
+                fillColor: {
+                  colors: [{
+                    opacity: 0.1
+                  }, {
+                    opacity: 0.13
+                  }]
+                }
+              },
+              points: {
+                show: true
+              }
+            }, {
+              label: "Facebook",
+              data: facebook,
+              lines: {
+                show: true,
+                lineWidth: 1,
+                fill: true,
+                fillColor: {
+                  colors: [{
+                    opacity: 0.1
+                  }, {
+                    opacity: 0.13
+                  }]
+                }
+              },
+              points: {
+                show: true
+              }
+            }];
+          var options = {
+            grid: {
+              hoverable: true
+            },
+            colors: ["#568A89", "#3276B1"],
+            tooltip: true,
+            tooltipOpts: {
+              //content : "Value <b>$x</b> Value <span>$y</span>",
+              defaultTheme: false
+            },
+            xaxis: {
+              ticks: [
+                [1, "JAN"],
+                [2, "FEB"],
+                [3, "MAR"],
+                [4, "APR"],
+                [5, "MAY"],
+                [6, "JUN"],
+                [7, "JUL"],
+                [8, "AUG"],
+                [9, "SEP"],
+                [10, "OCT"],
+                [11, "NOV"],
+                [12, "DEC"],
+                [13, "JAN+1"]
+              ]
+            },
+            yaxes: {}
+          };
+          var plot3 = $.plot($("#statsChart"), data, options);
+        });
+        // END TAB 2
+        // TAB THREE GRAPH //
+        /* TAB 3: Revenew  */
+        $(function() {
+          var trgt = [
+              [1354586000000, 153],
+              [1364587000000, 658],
+              [1374588000000, 198],
+              [1384589000000, 663],
+              [1394590000000, 801],
+              [1404591000000, 1080],
+              [1414592000000, 353],
+              [1424593000000, 749],
+              [1434594000000, 523],
+              [1444595000000, 258],
+              [1454596000000, 688],
+              [1464597000000, 364]
+            ],
+            prft = [
+              [1354586000000, 53],
+              [1364587000000, 65],
+              [1374588000000, 98],
+              [1384589000000, 83],
+              [1394590000000, 980],
+              [1404591000000, 808],
+              [1414592000000, 720],
+              [1424593000000, 674],
+              [1434594000000, 23],
+              [1444595000000, 79],
+              [1454596000000, 88],
+              [1464597000000, 36]
+            ],
+            sgnups = [
+              [1354586000000, 647],
+              [1364587000000, 435],
+              [1374588000000, 784],
+              [1384589000000, 346],
+              [1394590000000, 487],
+              [1404591000000, 463],
+              [1414592000000, 479],
+              [1424593000000, 236],
+              [1434594000000, 843],
+              [1444595000000, 657],
+              [1454596000000, 241],
+              [1464597000000, 341]
+            ],
+            toggles = $("#rev-toggles"),
+            target = $("#flotcontainer");
+          var data = [{
+            label: "Target Profit",
+            data: trgt,
+            bars: {
+              show: true,
+              align: "center",
+              barWidth: 30 * 30 * 60 * 1000 * 80
+            }
+          }, {
+            label: "Actual Profit",
+            data: prft,
+            color: '#3276B1',
+            lines: {
+              show: true,
+              lineWidth: 3
+            },
+            points: {
+              show: true
+            }
+          }, {
+            label: "Actual Signups",
+            data: sgnups,
+            color: '#71843F',
+            lines: {
+              show: true,
+              lineWidth: 1
+            },
+            points: {
+              show: true
+            }
+          }]
+          var options = {
+            grid: {
+              hoverable: true
+            },
+            tooltip: true,
+            tooltipOpts: {
+              //content: '%x - %y',
+              //dateFormat: '%b %y',
+              defaultTheme: false
+            },
+            xaxis: {
+              mode: "time"
+            },
+            yaxes: {
+              tickFormatter: function(val, axis) {
+                return "$" + val;
+              },
+              max: 1200
+            }
+          };
+          plot2 = null;
+
+          function plotNow() {
+            var d = [];
+            toggles.find(':checkbox').each(function() {
+              if ($(this).is(':checked')) {
+                d.push(data[$(this).attr("name").substr(4, 1)]);
+              }
+            });
+            if (d.length > 0) {
+              if (plot2) {
+                plot2.setData(d);
+                plot2.draw();
+              } else {
+                plot2 = $.plot(target, d, options);
+              }
+            }
+          };
+          toggles.find(':checkbox').on('change', function() {
+            plotNow();
+          });
+          plotNow()
+        });
+        /*
+         * VECTOR MAP
+         */
+        data_array = {
+          "US": 4977,
+          "AU": 4873,
+          "IN": 3671,
+          "BR": 2476,
+          "TR": 1476,
+          "CN": 146,
+          "CA": 134,
+          "BD": 100
+        };
+        $('#vector-map').vectorMap({
+          map: 'world_mill_en',
+          backgroundColor: '#fff',
+          regionStyle: {
+            initial: {
+              fill: '#c4c4c4'
+            },
+            hover: {
+              "fill-opacity": 1
+            }
+          },
+          series: {
+            regions: [{
+              values: data_array,
+              scale: ['#85a8b6', '#4d7686'],
+              normalizeFunction: 'polynomial'
+            }]
+          },
+          onRegionLabelShow: function(e, el, code) {
+            if (typeof data_array[code] == 'undefined') {
+              e.preventDefault();
+            } else {
+              var countrylbl = data_array[code];
+              el.html(el.html() + ': ' + countrylbl + ' visits');
+            }
+          }
+        });
+        /*
+         * FULL CALENDAR JS
+         */
+        if ($("#calendar").length) {
+          var date = new Date();
+          var d = date.getDate();
+          var m = date.getMonth();
+          var y = date.getFullYear();
+          var calendar = $('#calendar').fullCalendar({
+            editable: true,
+            draggable: true,
+            selectable: false,
+            selectHelper: true,
+            unselectAuto: false,
+            disableResizing: false,
+            header: {
+              left: 'title', //,today
+              center: 'prev, next, today',
+              right: 'month, agendaWeek, agenDay' //month, agendaDay,
+            },
+            select: function(start, end, allDay) {
+              var title = prompt('Event Title:');
+              if (title) {
+                calendar.fullCalendar('renderEvent', {
+                    title: title,
+                    start: start,
+                    end: end,
+                    allDay: allDay
+                  }, true // make the event "stick"
+                );
+              }
+              calendar.fullCalendar('unselect');
+            },
+            events: [{
+              title: 'All Day Event',
+              start: new Date(y, m, 1),
+              description: 'long description',
+              className: ["event", "bg-color-greenLight"],
+              icon: 'fa-check'
+            }, {
+              title: 'Long Event',
+              start: new Date(y, m, d - 5),
+              end: new Date(y, m, d - 2),
+              className: ["event", "bg-color-red"],
+              icon: 'fa-lock'
+            }, {
+              id: 999,
+              title: 'Repeating Event',
+              start: new Date(y, m, d - 3, 16, 0),
+              allDay: false,
+              className: ["event", "bg-color-blue"],
+              icon: 'fa-clock-o'
+            }, {
+              id: 999,
+              title: 'Repeating Event',
+              start: new Date(y, m, d + 4, 16, 0),
+              allDay: false,
+              className: ["event", "bg-color-blue"],
+              icon: 'fa-clock-o'
+            }, {
+              title: 'Meeting',
+              start: new Date(y, m, d, 10, 30),
+              allDay: false,
+              className: ["event", "bg-color-darken"]
+            }, {
+              title: 'Lunch',
+              start: new Date(y, m, d, 12, 0),
+              end: new Date(y, m, d, 14, 0),
+              allDay: false,
+              className: ["event", "bg-color-darken"]
+            }, {
+              title: 'Birthday Party',
+              start: new Date(y, m, d + 1, 19, 0),
+              end: new Date(y, m, d + 1, 22, 30),
+              allDay: false,
+              className: ["event", "bg-color-darken"]
+            }, {
+              title: 'Smartadmin Open Day',
+              start: new Date(y, m, 28),
+              end: new Date(y, m, 29),
+              className: ["event", "bg-color-darken"]
+            }],
+            eventRender: function(event, element, icon) {
+              if (!event.description == "") {
+                element.find('.fc-event-title').append("<br/><span class='ultra-light'>" + event.description + "</span>");
+              }
+              if (!event.icon == "") {
+                element.find('.fc-event-title').append("<i class='air air-top-right fa " + event.icon + " '></i>");
+              }
+            }
+          });
+        };
+        /* hide default buttons */
+        $('.fc-header-right, .fc-header-center').hide();
+        // calendar prev
+        $('#calendar-buttons #btn-prev').click(function() {
+          $('.fc-button-prev').click();
+          return false;
+        });
+        // calendar next
+        $('#calendar-buttons #btn-next').click(function() {
+          $('.fc-button-next').click();
+          return false;
+        });
+        // calendar today
+        $('#calendar-buttons #btn-today').click(function() {
+          $('.fc-button-today').click();
+          return false;
+        });
+        // calendar month
+        $('#mt').click(function() {
+          $('#calendar').fullCalendar('changeView', 'month');
+        });
+        // calendar agenda week
+        $('#ag').click(function() {
+          $('#calendar').fullCalendar('changeView', 'agendaWeek');
+        });
+        // calendar agenda day
+        $('#td').click(function() {
+          $('#calendar').fullCalendar('changeView', 'agendaDay');
+        });
+        /*
+         * CHAT
+         */
+        $.filter_input = $('#filter-chat-list');
+        $.chat_users_container = $('#chat-container > .chat-list-body')
+        $.chat_users = $('#chat-users')
+        $.chat_list_btn = $('#chat-container > .chat-list-open-close');
+        $.chat_body = $('#chat-body');
+        /*
+         * LIST FILTER (CHAT)
+         */
+        // custom css expression for a case-insensitive contains()
+        jQuery.expr[':'].Contains = function(a, i, m) {
+          return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+        };
+
+        function listFilter(list) { // header is any element, list is an unordered list
+          // create and add the filter form to the header
+          $.filter_input.change(function() {
+            var filter = $(this).val();
+            if (filter) {
+              // this finds all links in a list that contain the input,
+              // and hide the ones not containing the input while showing the ones that do
+              $.chat_users.find("a:not(:Contains(" + filter + "))").parent().slideUp();
+              $.chat_users.find("a:Contains(" + filter + ")").parent().slideDown();
+            } else {
+              $.chat_users.find("li").slideDown();
+            }
+            return false;
+          }).keyup(function() {
+            // fire the above change event after every letter
+            $(this).change();
+          });
+        }
+        // on dom ready
+        listFilter($.chat_users);
+        // open chat list
+        $.chat_list_btn.click(function() {
+          $(this).parent('#chat-container').toggleClass('open');
+        })
+        $.chat_body.animate({
+          scrollTop: $.chat_body[0].scrollHeight
+        }, 500);
+      });
+    </script>
+    <!-- Your GOOGLE ANALYTICS CODE Below -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <!--Start of Zendesk Chat Script-->
+    <script type="text/javascript">
+      window.$zopim || (function(d, s) {
+        var z = $zopim = function(c) {
+            z._.push(c)
+          },
+          $ = z.s =
+          d.createElement(s),
+          e = d.getElementsByTagName(s)[0];
+        z.set = function(o) {
+          z.set.
+          _.push(o)
+        };
+        z._ = [];
+        z.set._ = [];
+        $.async = !0;
+        $.setAttribute("charset", "utf-8");
+        $.src = "https://v2.zopim.com/?5g34msdTUoD3xs5gg8G8GOt7f5J3a8mV";
+        z.t = +new Date;
+        $.
+        type = "text/javascript";
+        e.parentNode.insertBefore($, e)
+      })(document, "script");
+    </script>
+    <!--End of Zendesk Chat Script-->
+    <script type="text/javascript">
+      function basicPopup() {
+        popupWindow = window.open("https://www.lycamobile.us/swap-sim", 'popUpWindow', 'height=300,width=600,left=100,top=30,resizable=No,scrollbars=No,toolbar=no,menubar=no,location=no,directories=no, status=No');
+      }
+    </script>
+  </form>
+</body>
+
+</html>

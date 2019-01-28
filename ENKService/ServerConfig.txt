@@ -1,0 +1,5 @@
+Data Source=104.42.44.252,21433;Initial Catalog=ENKTESTDB;Persist Security Info=True;User ID=sqladmin;Password=a#!p$@Wk2Y
+Data Source=168.61.36.93;Initial Catalog=BNK;Persist Security Info=True;User ID=sqladmin;Password=rNr#5!fqEKYv
+Data Source=104.42.44.252,21433;Initial Catalog=ENK;Persist Security Info=True;User ID=sqladmin;Password=a#!p$@Wk2Y
+Data Source=168.61.176.70,21433;Initial Catalog=EAHA;Persist Security Info=True;User ID=sqladmin;Password=hTjs%rTT2Y
+Data Source=180.179.221.40,19309;Initial Catalog=ENK;Persist Security Info=True;User ID=GME;Password=gM12345@

@@ -1,0 +1,27 @@
+04-Jul-2017 11:22:37|1 1 1
+04-Jul-2017 11:33:43|1 1 1
+04-Jul-2017 11:34:47|1 1 1
+04-Jul-2017 11:35:54|1 1 1
+04-Jul-2017 12:12:28|1 1 1
+04-Jul-2017 12:12:32|PayPal Topup PayPal Topup Pending
+04-Jul-2017 12:13:19|1 1 1
+04-Jul-2017 12:13:19|PayPal Topup PayPal Topup Pending
+04-Jul-2017 13:05:49|1 1 1
+04-Jul-2017 13:12:27|1 1 1
+04-Jul-2017 13:19:40|1 1 1
+04-Jul-2017 13:19:40|ChargedAmount:-1Response with paypal... Transaction Success Reason :- SUCCESSmc_gross=1.03protection_eligibility=Eligibleaddress_status=unconfirmedpayer_id=7U97FMFNSRWNQtax=0.00address_street=Noidapayment_date=00:00:08 Jun 25, 2015 PDTpayment_status=Completedcharset=windows-1252address_zip=201301first_name=Puneetmc_fee=0.34address_country_code=INaddress_name=Puneet Goelcustom=payer_status=unverifiedbusiness=ahprepaid@yahoo.comaddress_country=Indiaaddress_city=Noidaquantity=1payer_email=puneet.goel@virtuzo.intxn_id=2YK83399RA269863Xpayment_type=instantlast_name=Goeladdress_state=Uttar Pradeshreceiver_email=ahprepaid@yahoo.compayment_fee=0.34receiver_id=3AABSL37W9D9Etxn_type=web_acceptitem_name=Topupmc_currency=USDitem_number=residence_country=INreceipt_id=4799-2339-3237-8742handling_amount=0.00transaction_subject=payment_gross=1.03shipping=0.00
+08-Jul-2017 06:23:16|1 12 1
+08-Jul-2017 06:23:47|1 1 1
+10-Jul-2017 13:06:47|1 1 23
+11-Jul-2017 06:19:06|1 1 23
+12-Jul-2017 12:03:30|1 1 1
+12-Jul-2017 12:06:56|1 1 10
+12-Jul-2017 12:10:04|1 1 10
+12-Jul-2017 12:17:54|60266 22 10
+12-Jul-2017 12:33:56|60266 22 20
+12-Jul-2017 12:53:44|60266 22 20
+12-Jul-2017 12:57:11|60266 22 10
+12-Jul-2017 13:02:49|60266 22 10
+12-Jul-2017 13:03:49|60266 22 10
+12-Jul-2017 13:16:10|60266 22 10
+18-Jul-2017 10:09:53|30196 3173 10
